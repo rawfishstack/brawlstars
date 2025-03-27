@@ -1,0 +1,87 @@
+SHELLY: {
+	SHELLY_Info: {
+		BrawlerDescription: Shelly est une ranger idéale: puissante, indépendante, et une as au tir. Pourtant, tout le monde préfère Colt. C'est vraiment trop injuste!
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: CHEVROTINE
+					Description: Un coup de feu projette une volée de plombs à distance moyenne. Plus il y a de plombs qui atteignent la cible, plus les dégâts sont élevés.
+
+					Stats: {
+						1: {
+							Key: Dégâts
+							Value: "{1} x {0}"
+						}
+					}
+				}
+
+				Super: {
+					Name: SUPER CHEVROTINE
+					Description: La super chevrotine de Shelly rase tout sur son passage, abris et ennemis compris ! Les survivants sont projetés en arrière.
+
+					Stats: {
+						1: {
+							Key: Dégâts
+							Value: "{1} x {0}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: DOUBLE CANON
+					Description: La zone de Super chevrotine est augmentée de {0}.
+
+					Stats: {
+						1: {
+							Key: VITESSE
+							Value: + {0}%
+						}
+
+						2: {
+							Key: DÉGÂTS
+							Value: + {0}%
+						}
+
+						3: {
+							Key: BOUCLIER
+							Value: + {0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: AVANCE RAPIDE
+				Description: Shelly sprinte vers l'avant, en omettant un pas (ou dix!).
+			}
+
+			2: {
+				Name: PIGEONS D'ARGILE
+				Description: À l'activation et pendant {0}seconde(s), les attaques principales de Shelly concentrent la puissance de tir sur une plus petite zone et ont une meilleure portée.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: ÉTOURDI
+				Description: La super chevrotine de Shelly ralentit les ennemis pendant {0}secondes.
+			}
+
+			2: {
+				Name: PANSEMENT
+				Description: Si la santé de Shelly est inférieure à {0}, elle récupère instantanément {1}points de santé. Le pansement se recharge en {2}secondes.
+			}
+		}
+	}
+
+	SHELLY_Item: {
+		DisplayName: SHELLY's Shotgun
+		Tooltip: ""
+	}
+}

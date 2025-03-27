@@ -1,0 +1,83 @@
+TooltipInfo: {
+	ItemTooltip: {
+		Rarity: 稀有度
+		HeroStats: 英雄属性
+		Traits: 天赋
+		Attack: 普通攻击
+		Super: 超级技能
+		Gadget: 随身妙具
+		StarPower: 星徽之力
+		HyperCharge: 极限充能
+		Select: 切换
+		Use: 使用
+		Selected: 已选
+		NotImplemented: 未实现
+	}
+
+	Rarities: {
+		Starting: 初始英雄
+		Rare: 稀有
+		SuperRare: 超稀有
+		Epic: 史诗
+		Mythic: 神话
+		Legendary: 传奇
+	}
+}
+
+Keybinds: {
+	GadgetSelect.DisplayName: 切换随身妙具
+	StarPowerSelect.DisplayName: 切换星徽之力
+	GadgetUse.DisplayName: 使用随身妙具
+	HyperChargeUse.DisplayName: 使用极限充能
+}
+
+Configs: {
+	ServerConfig: {
+		DisplayName: 服务器配置
+
+		Headers: {
+			Balances: 平衡性
+			Developer: 开发者
+		}
+
+		DamageValueNormalization: {
+			Label: 伤害标准化
+			Tooltip:
+				'''
+				对玩家攻击产生的伤害值根据其持有英雄物品代表的英雄的生命值调整，
+				对于没有持有这类物品的玩家视为5000生命值的英雄。
+				'''
+		}
+
+		DebugMode: {
+			Label: 调试模式
+			Tooltip: ""
+		}
+	}
+
+	ClientConfig: {
+		DisplayName: 客户端配置
+
+		Headers: {
+			Graphics: 图形
+			Developer: 开发者
+		}
+
+		RenderQuality: {
+			Label: 渲染质量
+			Tooltip: ""
+		}
+
+		DebugMode: {
+			Label: 调试模式
+			Tooltip: ""
+		}
+	}
+
+	RenderQualityEnum: {
+		Tooltip: ""
+		Low.Label: 低
+		Medium.Label: 中
+		High.Label: 高
+	}
+}

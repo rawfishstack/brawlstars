@@ -1,0 +1,90 @@
+BIBI: {
+	BIBI_Info: {
+		BrawlerDescription: Si ves a Bibi acercarse con su bate, ten cuidado: es tan peligrosa como parece. También es un poco friki, pero eso lo mantiene en secreto, ¡no puede manchar su reputación!
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: TRES STRIKES
+					Description: A Bibi le encanta batear. Cuando ataca con la barra amarilla cargada, el impacto del bate empuja a los enemigos. La barra comienza a cargarse cuando Bibi tiene tres ataques disponibles.
+
+					Stats: {
+						1: {
+							Key: Daño
+							Value: "{0}"
+						}
+					}
+				}
+
+				Super: {
+					Name: MASCA Y MACHACA
+					Description: Bibi lanza una bola de chicle que rebota y puede atravesar a los rivales e incluso infligir daño al mismo objetivo varias veces.
+
+					Stats: {
+						1: {
+							Key: Daño
+							Value: "{0}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: FUERA DEL CAMPO
+					Description: La bola de chicle de Bibi se divide al golpear a un enemigo.
+
+					Stats: {
+						1: {
+							Key: VELOCIDAD
+							Value: +{0}%
+						}
+
+						2: {
+							Key: DAÑO
+							Value: +{0}%
+						}
+
+						3: {
+							Key: ESCUDO
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: SUPLEMENTO VITAMÍNICO
+				Description: Bibi recupera {0}puntos de salud por segundo durante {1}segundos.
+			}
+
+			2: {
+				Name: EXTRAPEGAJOSO
+				Description: El siguiente chicle del súper de Bibi ralentiza a los enemigos a los que impacte durante {0}segundos.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: CORREDORA
+				Description: Bibi se mueve un {0} más rápido cuando la barra amarilla está cargada por completo.
+			}
+
+			2: {
+				Name: A LA DEFENSIVA
+				Description: Cuando la barra amarilla de Bibi está cargada al completo, se vuelve inmune a todo el daño en un {0}.
+			}
+		}
+	}
+
+	BIBI_Item: {
+		DisplayName: BIBI's Baseball bat
+		Tooltip: ""
+	}
+
+	// BIBI_ProjectileAttack.DisplayName: B I B I_ Projectile Attack
+	// BIBI_ProjectileSuper.DisplayName: B I B I_ Projectile Super
+}

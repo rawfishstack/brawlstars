@@ -1,0 +1,101 @@
+MORTIS: {
+	MORTIS_Info: {
+		BrawlerDescription: Mortis chciał otworzyć zakład pogrzebowy i zostać wampirem, ale fakt, że w Parku Starr nikt nie umiera, mocno pokrzyżował jego plany.
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: MACHNIĘCIE ŁOPATĄ
+					Description: Mortis błyskawicznie przesuwa się do przodu z każdym potężnym machnięciem łopatą, bez wahania korzystając ze swojej przewagi. Gdy wszystkie trzy sprinty są gotowe, Mortis otrzymuje po chwili dłuższy sprint.
+
+					Stats: {
+						1: {
+							Key: Obrażenia
+							Value: "{0}"
+						}
+
+						2: {
+							Key: Opóźnienie dłuższego sprintu
+							Value: "{0}s"
+						}
+					}
+				}
+
+				Super: {
+					Name: ŻYCIODAJNA KREW
+					Description: Mortis przyzywa stado wampirycznych nietoperzy, które wysysają życie z Zadymiarzy przeciwnika i leczą swojego pana. Przerażające!
+
+					Stats: {
+						1: {
+							Key: Obrażenia
+							Value: "{0}"
+						}
+
+						2: {
+							Key: Leczenie obrażeń
+							Value: "{0}%"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: KRWAWY BUMERANG
+					Description: Życiodajna krew wraca teraz do Mortisa, umożliwiając podwójne obrażenia ileczenie.
+
+					Stats: {
+						1: {
+							Key: PRĘDKOŚĆ
+							Value: +{0}%
+						}
+
+						2: {
+							Key: OBRAŻENIA
+							Value: +{0}%
+						}
+
+						3: {
+							Key: TARCZA
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: SPINNER COMBO
+				Description: Mortis rozkręca łopatę, waląc nią wszystkich przeciwników wokół siebie i zadając {0} obrażeń.
+			}
+
+			2: {
+				Name: ŁOPATA PRZETRWANIA
+				Description: Mortis przeładowuje szybciej przez {0} sek.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: STRASZNY ŻNIWIARZ
+				Description: Mortis wysysa energię z pokonanych Zadymiarzy, odzyskując {0} maks. pkt. życia.
+			}
+
+			2: {
+				Name: ZWINIĘTY WĄŻ
+				Description: Mortis zdobywa dłuższy sprint o {0} s szybciej.
+			}
+		}
+	}
+
+	MORTIS_Item: {
+		DisplayName: MORTIS's Shovel
+		Tooltip: ""
+	}
+
+	// MORTIS_ProjectileAttack.DisplayName: M O R T I S_ Projectile Attack
+	// MORTIS_ProjectileGadget1.DisplayName: M O R T I S_ Projectile Gadget1
+	// MORTIS_ProjectileSuper.DisplayName: M O R T I S_ Projectile Super
+}

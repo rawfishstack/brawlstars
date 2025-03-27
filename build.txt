@@ -1,0 +1,3 @@
+displayName = Brawl Stars
+author = 小闲鱼
+version = 0.2.1

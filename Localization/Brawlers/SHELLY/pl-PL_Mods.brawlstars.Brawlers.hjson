@@ -1,0 +1,87 @@
+SHELLY: {
+	SHELLY_Info: {
+		BrawlerDescription: Shelly to idealna strażniczka: jest niezawodna, twarda i potrafi siać spustoszenie strzelbą. Nigdy nie rozumiała, dlaczego Colt kradł jej światło reflektorów.
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: ŚRUTÓWKA
+					Description: Śrutówka Shelly ma średni zasięg i razi wrogów na szerokim obszarze. Im większa ilość śrutu trafi do celu, tym większe zadaje obrażenia.
+
+					Stats: {
+						1: {
+							Key: Obrażenia
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: SUPERPOCISK
+					Description: Superpocisk Shelly niszczy i osłony, i wrogów. Każdy, kto przeżyje, zostaje odrzucony.
+
+					Stats: {
+						1: {
+							Key: Obrażenia
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: DUBELTÓWKA
+					Description: Superpocisk jest {0} większy.
+
+					Stats: {
+						1: {
+							Key: PRĘDKOŚĆ
+							Value: +{0}%
+						}
+
+						2: {
+							Key: OBRAŻENIA
+							Value: +{0}%
+						}
+
+						3: {
+							Key: TARCZA
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: HEJ DO PRZODU
+				Description: Shelly rzuca się naprzód, pomijając parę niekoniecznych kroków!
+			}
+
+			2: {
+				Name: GLINIANE GOŁĘBIE
+				Description: Po aktywacji przez następne {0} s główne ataki Shelly skupiają ostrzał na mniejszym obszarze z większym zasięgiem.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: SZOK BITEWNY
+				Description: Pociski superataku Shelly spowalniają wrogów na {0}s.
+			}
+
+			2: {
+				Name: PLASTER
+				Description: Jeśli punkty życia Shelly spadną poniżej {0}, natychmiast odzyska ona {1} pkt. zdrowia. Plaster ładuje się w {2}s.
+			}
+		}
+	}
+
+	SHELLY_Item: {
+		DisplayName: SHELLY's Shotgun
+		Tooltip: ""
+	}
+}

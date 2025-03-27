@@ -1,0 +1,101 @@
+MORTIS: {
+	MORTIS_Info: {
+		BrawlerDescription: Mortis avait tout planifié: il allait être le meilleur vampire et croque-mort du parc. Mais vu qu'à Starr Park, personne ne meurt, ses plans sont un peu tombés à l'eau.
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: COUP DE PELLE
+					Description: Mortis fonce sur ses ennemis et leur assène un grand coup de pelle. Après tout, c'est bon pour les affaires. S'il conserve ses trois charges un court moment, sa première charge est allongée.
+
+					Stats: {
+						1: {
+							Key: Dégâts
+							Value: "{0}"
+						}
+
+						2: {
+							Key: Délai charge allongée
+							Value: "{0}s"
+						}
+					}
+				}
+
+				Super: {
+					Name: CHAUVES-SOURIS
+					Description: Mortis appelle des chauve-souris vampires qui drainent les brawlers ennemis de leurs points de santé et restaurent les siens. Comme c'est charmant!
+
+					Stats: {
+						1: {
+							Key: Dégâts
+							Value: "{0}"
+						}
+
+						2: {
+							Key: Dégâts convertis en soins
+							Value: "{0}%"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: BOOMERANG SANGUIN
+					Description: Les chauves-souris reviennent désormais vers Mortis, pouvant blesser et soigner deux fois.
+
+					Stats: {
+						1: {
+							Key: VITESSE
+							Value: + {0}%
+						}
+
+						2: {
+							Key: DÉGÂTS
+							Value: + {0}%
+						}
+
+						3: {
+							Key: BOUCLIER
+							Value: + {0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: BOBINE DE COMBO
+				Description: Mortis fait tournoyer sa pelle et frappe les ennemis tout autour, leur infligeant {0}points de dégâts.
+			}
+
+			2: {
+				Name: PELLE DE SURVIE
+				Description: Mortis recharge plus rapidement pendant {0}secondes.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: MOISSOMBRE
+				Description: Mortis récolte l'essence de vie des brawlers qu'il a vaincus, récupérant {0} de sa santé max.
+			}
+
+			2: {
+				Name: SERPENT SOURNOIS
+				Description: Le délai de la charge allongée de Mortis est réduit de {0}seconde(s).
+			}
+		}
+	}
+
+	MORTIS_Item: {
+		DisplayName: MORTIS's Shovel
+		Tooltip: ""
+	}
+
+	// MORTIS_ProjectileAttack.DisplayName: M O R T I S_ Projectile Attack
+	// MORTIS_ProjectileGadget1.DisplayName: M O R T I S_ Projectile Gadget1
+	// MORTIS_ProjectileSuper.DisplayName: M O R T I S_ Projectile Super
+}

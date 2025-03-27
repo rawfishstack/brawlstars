@@ -1,0 +1,87 @@
+SHELLY: {
+	SHELLY_Info: {
+		BrawlerDescription: Shelly ist die perfekte Rangerin. Sie ist zuverlässig, zäh und eine fantastische Schrotflinten-Schützin. Es ist ihr unbegreiflich, wie Colt es geschafft hat, alle Aufmerksamkeit auf sich zu ziehen...
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: STREUSCHUSS
+					Description: Shellys Schießeisen feuert eine weit gestreute Schrotsalve mit mittlerer Reichweite. Je mehr Kugeln treffen, desto größer ist der Schaden.
+
+					Stats: {
+						1: {
+							Key: Schaden
+							Value: "{0}x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: SUPERSCHROT
+					Description: Shellys Superschrot macht sowohl Deckungen als auch Gegner dem Erdboden gleich. Wer davon noch nicht erledigt wird, wird zurückgestoßen.
+
+					Stats: {
+						1: {
+							Key: Schaden
+							Value: "{0}x {1}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: ZUSATZLAUF
+					Description: Superschrot ist {0} größer.
+
+					Stats: {
+						1: {
+							Key: TEMPO
+							Value: +{0}%
+						}
+
+						2: {
+							Key: SCHADEN
+							Value: +{0}%
+						}
+
+						3: {
+							Key: SCHILD
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: SPRINTAMULETT
+				Description: Shelly sprintet vorwärts und spart sich so ein paar überflüssige Schritte!
+			}
+
+			2: {
+				Name: TONTAUBEN
+				Description: Wird dies aktiviert, wird Shellys Hauptattacke {0} Sekunden lang auf einen kleineren Bereich fokussiert und verfügt über eine höhere Reichweite.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: SCHROTBREMSE
+				Description: Shellys Superschrot verlangsamt Gegner {0} Sekunden lang!
+			}
+
+			2: {
+				Name: WUNDERPFLASTER
+				Description: Fallen Shellys Trefferpunkte unter {0}, wird sie sofort um {1} TP geheilt. Wunderpflaster lädt sich innerhalb von {2} Sekunden wieder auf.
+			}
+		}
+	}
+
+	SHELLY_Item: {
+		DisplayName: SHELLY's Shotgun
+		Tooltip: ""
+	}
+}

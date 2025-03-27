@@ -1,0 +1,101 @@
+MORTIS: {
+	MORTIS_Info: {
+		BrawlerDescription: Como vampiro y experto en el más allá, Mortis estaba seguro de que su funeraria sería todo un éxito. Por desgracia, nadie muere en Starr Park, lo que supone un bache para el negocio.
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: PALAZO
+					Description: Mortis se abalanza sobre sus enemigos y les asesta un buen palazo. ¡Que no decaiga el trabajo! Cuando sus tres ataques estén disponibles, conseguirá uno más largo al cabo de un rato.
+
+					Stats: {
+						1: {
+							Key: Daño
+							Value: "{0}"
+						}
+
+						2: {
+							Key: Retraso del ataque más largo
+							Value: "{0}s"
+						}
+					}
+				}
+
+				Super: {
+					Name: TRANSFUSIÓN
+					Description: Mortis invoca a una bandada de murciélagos vampiro que absorben la salud de los brawlers enemigos y se la traspasan a él. ¡Es espeluznante!
+
+					Stats: {
+						1: {
+							Key: Daño
+							Value: "{0}"
+						}
+
+						2: {
+							Key: Curación del daño
+							Value: "{0}%"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: BUMERÁN SANGUÍNEO
+					Description: Transfusión vuelve a Mortis, con lo que puede infligir el doble de daño y curar el doble.
+
+					Stats: {
+						1: {
+							Key: VELOCIDAD
+							Value: +{0}%
+						}
+
+						2: {
+							Key: DAÑO
+							Value: +{0}%
+						}
+
+						3: {
+							Key: ESCUDO
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: PALA ROTATIVA
+				Description: Mortis hace girar la pala y golpea a todos los rivales que se encuentren a su alrededor, infligiendo {0}puntos de daño.
+			}
+
+			2: {
+				Name: PALA DE SUPERVIVENCIA
+				Description: El ataque de Mortis se recarga más rápido durante {0}segundos.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: RECOLECTOR DE ALMAS
+				Description: Mortis recolecta las almas de los enemigos que derrota. Cada alma que recolecte le hará recuperar un {0}de sus puntos de salud máximos.
+			}
+
+			2: {
+				Name: ATAQUE INESPERADO
+				Description: Mortis consigue un ataque más largo {0}segundos más rápido.
+			}
+		}
+	}
+
+	MORTIS_Item: {
+		DisplayName: MORTIS's Shovel
+		Tooltip: ""
+	}
+
+	// MORTIS_ProjectileAttack.DisplayName: M O R T I S_ Projectile Attack
+	// MORTIS_ProjectileGadget1.DisplayName: M O R T I S_ Projectile Gadget1
+	// MORTIS_ProjectileSuper.DisplayName: M O R T I S_ Projectile Super
+}

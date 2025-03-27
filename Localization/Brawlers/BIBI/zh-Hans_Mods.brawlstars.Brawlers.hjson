@@ -1,0 +1,90 @@
+BIBI: {
+	BIBI_Info: {
+		BrawlerDescription: 比比是个强硬的朋克青年，从她手上的球棒和她的态度就能看出来。她还有点书呆子气，但她不会表现出来，因为要维护自己的形象！
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: 三振出击
+					Description: 比比挥舞棒球棍击打敌人。当比比的3格弹药槽全满时，她将自动积蓄本垒打能量条。能量条充满后，她的下一次普通攻击就可以击退敌人！
+
+					Stats: {
+						1: {
+							Key: 伤害
+							Value: "{0}"
+						}
+					}
+				}
+
+				Super: {
+					Name: 唾沫弹球
+					Description: 比比打出一个泡泡糖做成的弹力球，不仅可以穿透敌人，甚至还能对同一个目标造成多次伤害！
+
+					Stats: {
+						1: {
+							Key: 伤害
+							Value: "{0}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: 双响炮
+					Description: 比比打出的弹力球命中敌人时会分裂。
+
+					Stats: {
+						1: {
+							Key: 速度
+							Value: +{0}%
+						}
+
+						2: {
+							Key: 伤害
+							Value: +{0}%
+						}
+
+						3: {
+							Key: 护盾
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: 强效维生素
+				Description: 比比每秒为自己恢复{0}生命值，持续{1}秒。
+			}
+
+			2: {
+				Name: 超粘泡泡糖
+				Description: 比比的下一发唾沫弹球使被击中的敌人减速{0}秒！
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: 本垒打
+				Description: 本垒打能量条充满时，比比的移动速度提升{0}。
+			}
+
+			2: {
+				Name: 战斗姿态
+				Description: 比比的本垒打能量条充满时，她受到的所有伤害降低{0}。
+			}
+		}
+	}
+
+	BIBI_Item: {
+		DisplayName: 比比的棒球棒
+		Tooltip: ""
+	}
+
+	// BIBI_ProjectileAttack.DisplayName: B I B I_ Projectile Attack
+	// BIBI_ProjectileSuper.DisplayName: B I B I_ Projectile Super
+}

@@ -1,0 +1,101 @@
+MORTIS: {
+	MORTIS_Info: {
+		BrawlerDescription: 莫提斯为自己的殡仪师和吸血鬼生涯制定了宏伟的计划。但星妙乐园没有人会死，这一事实让他的计划受到巨大的阻碍。
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: 铁铲突击
+					Description: 莫提斯猛地挥铲向前突击，为自己的事业创造商机。3格弹药槽全满时，他将获得一个自动充能的突击能量条。能量条充满后，他下一次突击的距离会更远。
+
+					Stats: {
+						1: {
+							Key: 伤害
+							Value: "{0}"
+						}
+
+						2: {
+							Key: 突击能量条充能时间
+							Value: "{0}秒"
+						}
+					}
+				}
+
+				Super: {
+					Name: 蝙蝠增援
+					Description: 莫提斯召唤出一群蝙蝠，它们伤害敌方英雄的同时也能为莫提斯恢复生命值，太恐怖了！
+
+					Stats: {
+						1: {
+							Key: 伤害
+							Value: "{0}"
+						}
+
+						2: {
+							Key: 生命吸收
+							Value: "{0}%"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: 回旋蝙蝠
+					Description: 蝙蝠增援召唤的蝙蝠会飞回莫提斯的位置，从而可再次击中敌人、提供治疗。
+
+					Stats: {
+						1: {
+							Key: 速度
+							Value: +{0}%
+						}
+
+						2: {
+							Key: 伤害
+							Value: +{0}%
+						}
+
+						3: {
+							Key: 护盾
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: 连击转轮
+				Description: 莫提斯猛挥铲子，对周围的敌人造成{0}伤害。
+			}
+
+			2: {
+				Name: 多功能铲
+				Description: 在{0}秒内加快莫提斯的装弹速度。
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: 精华吸收
+				Description: 击败敌方英雄后，莫提斯能够获取对方的生命精华，为自己恢复最大生命值的{0}。
+			}
+
+			2: {
+				Name: 蝮蛇出洞
+				Description: 莫提斯突击能量条的充能时间缩短{0}秒。
+			}
+		}
+	}
+
+	MORTIS_Item: {
+		DisplayName: 莫提斯的铲子
+		Tooltip: ""
+	}
+
+	// MORTIS_ProjectileAttack.DisplayName: M O R T I S_ Projectile Attack
+	// MORTIS_ProjectileGadget1.DisplayName: M O R T I S_ Projectile Gadget1
+	// MORTIS_ProjectileSuper.DisplayName: M O R T I S_ Projectile Super
+}

@@ -1,0 +1,142 @@
+MEG: {
+	MEG_Info: {
+		BrawlerDescription: Meg si accontenta di stare dietro le quinte e di risolvere i veri problemi col suo mecha, lasciando a Maxine e a Energetik il compito di intrattenere il pubblico.
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: BERSAGLIO ACQUISITO
+					Description: Con la sua pistola laser, Meg spara raggi a breve distanza che mettono a dura prova la pazienza degli avversari.
+
+					Stats: {
+						1: {
+							Key: Danni
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: MEGAMACCHINA
+					Description: Meg semina distruzione ovunque a bordo del suo mecha!
+
+					Stats: {
+						1: {
+							Key: Tempo trasformazione
+							Value: "{0}s"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: ""
+					Description: ""
+
+					Stats: {
+						1: {
+							Key: VELOCITÀ
+							Value: +{0}%
+						}
+
+						2: {
+							Key: DANNI
+							Value: +{0}%
+						}
+
+						3: {
+							Key: DIFESA
+							Value: +{0}%
+						}
+					}
+				}
+			}
+
+			2: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: RAFFICA ANTISOMMOSSA
+					Description: Questa scarica di colpi non lascia nulla al caso ed è il modo migliore per seminare il panico!
+
+					Stats: {
+						1: {
+							Key: Danni
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: BRACCIO DI FERRO
+					Description: Il mecha sferra un colpo micidiale con il suo braccio, che i nemici ricorderanno per un bel po' di tempo.
+
+					Stats: {
+						1: {
+							Key: Danni
+							Value: "{0}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: ""
+					Description: ""
+
+					Stats: {
+						1: {
+							Key: VELOCITÀ
+							Value: +{0}%
+						}
+
+						2: {
+							Key: DANNI
+							Value: +{0}%
+						}
+
+						3: {
+							Key: DIFESA
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: POWER BANK
+				Description: Una volta attivato, il gadget permette al mecha di ripristinare {0} punti salute al secondo per {1} secondi.
+			}
+
+			2: {
+				Name: CASSETTA DEGLI ATTREZZI
+				Description: Meg mette per terra la sua cassetta degli attrezzi, che aumenta la velocità di ricarica degli alleati vicini del {0}, finché non viene distrutta.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: CAMPO DI FORZA
+				Description: Meg riceve uno scudo che riduce i danni subiti del {0} per {1} secondi, una volta che il mecha viene distrutto.
+			}
+
+			2: {
+				Name: REGALO D'ADDIO
+				Description: Quando esaurisce la salute, il mecha esplode causando {0} punti danno a tutti gli avversari nelle vicinanze e sbalzandoli indietro.
+			}
+		}
+	}
+
+	MEG_Item: {
+		DisplayName: MEG's Blaster that pokes
+		Tooltip: ""
+	}
+
+	// MEG_ProjectileAttack1.DisplayName: M E G_ Projectile Attack1
+	// MEG_ProjectileAttack2.DisplayName: M E G_ Projectile Attack2
+	// MEG_ProjectileSuper2.DisplayName: M E G_ Projectile Super2
+}

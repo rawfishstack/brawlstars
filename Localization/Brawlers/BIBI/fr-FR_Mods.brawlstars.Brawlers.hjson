@@ -1,0 +1,90 @@
+BIBI: {
+	BIBI_Info: {
+		BrawlerDescription: Billie est punk, forte, et ne sort jamais sans sa batte de baseball. Elle a un petit côté geek aussi, mais elle ne le montre pas. Elle tient trop à sa réputation!
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: BAS LES BATTES!
+					Description: Billie donne des grands coups de batte. Quand la barre orange est pleine, la barre jaune se charge: si celle-ci est remplie, son coup de batte repousse les ennemis.
+
+					Stats: {
+						1: {
+							Key: Dégâts
+							Value: "{0}"
+						}
+					}
+				}
+
+				Super: {
+					Name: CHEWING-BALLE
+					Description: Billie frappe de sa batte une boule de chewing-gum qui rebondit et traverse les ennemis. Et pas qu'une fois!
+
+					Stats: {
+						1: {
+							Key: Dégâts
+							Value: "{0}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: PETITS BONDS
+					Description: La chewing-balle de Billie se divise en deux quand elle touche un ennemi.
+
+					Stats: {
+						1: {
+							Key: VITESSE
+							Value: + {0}%
+						}
+
+						2: {
+							Key: DÉGÂTS
+							Value: + {0}%
+						}
+
+						3: {
+							Key: BOUCLIER
+							Value: + {0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: PAQUET DE VITAMINES
+				Description: Billie régénère {0}points de santé par seconde pendant {1}secondes.
+			}
+
+			2: {
+				Name: SUPER GLUE
+				Description: La prochaine chewing-balle de Billie ralentit les ennemis touchés pendant {0}secondes.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: COURS, BILLIE, COURS
+				Description: Si la barre jaune est pleine, la vitesse de déplacement de Billie augmente de {0}.
+			}
+
+			2: {
+				Name: PARÉ À TIRER
+				Description: Lorsque la barre jaune est pleine, Billie peut se protéger contre {0} des dégâts ennemis.
+			}
+		}
+	}
+
+	BIBI_Item: {
+		DisplayName: BILLIE's Baseball bat
+		Tooltip: ""
+	}
+
+	// BIBI_ProjectileAttack.DisplayName: B I B I_ Projectile Attack
+	// BIBI_ProjectileSuper.DisplayName: B I B I_ Projectile Super
+}

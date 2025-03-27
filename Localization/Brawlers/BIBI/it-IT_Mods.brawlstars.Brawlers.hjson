@@ -1,0 +1,90 @@
+BIBI: {
+	BIBI_Info: {
+		BrawlerDescription: Bibi è una teppista che si atteggia da dura e che va in giro brandendo una mazza da baseball. È anche un po' nerd, ma è un lato che tiene ben nascosto. D'altronde, ha una reputazione da mantenere.
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: TRE STRIKE
+					Description: Bibi non fa prigionieri con la sua mazza. Quando ha tutti e tre i colpi a disposizione, l'indicatore del fuoricampo si riempie e, una volta carico, le permette di sbalzare all'indietro i nemici.
+
+					Stats: {
+						1: {
+							Key: Danni
+							Value: "{0}"
+						}
+					}
+				}
+
+				Super: {
+					Name: ELIMINATO
+					Description: Bibi usa la mazza per lanciare una gomma damasticare che rimbalza ovunque e perfora inemici, anche più di una volta.
+
+					Stats: {
+						1: {
+							Key: Danni
+							Value: "{0}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: SENZA SCAMPO
+					Description: La palla rimbalzante di Bibi si divide dopo aver colpito un nemico.
+
+					Stats: {
+						1: {
+							Key: VELOCITÀ
+							Value: +{0}%
+						}
+
+						2: {
+							Key: DANNI
+							Value: +{0}%
+						}
+
+						3: {
+							Key: DIFESA
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: VITAMINE
+				Description: Bibi recupera {0} punti salute al secondo per {1} secondi.
+			}
+
+			2: {
+				Name: COLLANTE
+				Description: La prossima volta che Bibi userà la super, la gomma da masticare rallenterà per {0} secondi i nemici che colpisce.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: FUORICAMPO
+				Description: La velocità di movimento di Bibi aumenta del {0} quando l'indicatore del fuoricampo è carico.
+			}
+
+			2: {
+				Name: MAGA DELLA DIFESA
+				Description: Quando l'indicatore del fuoricampo è carico, Bibi riduce qualsiasi danno subito del {0}.
+			}
+		}
+	}
+
+	BIBI_Item: {
+		DisplayName: BIBI's Baseball bat
+		Tooltip: ""
+	}
+
+	// BIBI_ProjectileAttack.DisplayName: B I B I_ Projectile Attack
+	// BIBI_ProjectileSuper.DisplayName: B I B I_ Projectile Super
+}

@@ -1,0 +1,101 @@
+MORTIS: {
+	MORTIS_Info: {
+		BrawlerDescription: Mortis tinha grandes projetos como agente funerário e vampiro, mas, como ainda não tem ninguém com o pé na cova no Starr Park, os negócios vão de mal a pior.
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: SETE PALMOS
+					Description: Com arrancadas para a frente e tacadas precisas da sua pá, os negócios de Mortis vão de vento em popa. Ao carregar três arrancadas, a primeira cobrirá uma distância maior após um pequeno atraso.
+
+					Stats: {
+						1: {
+							Key: Dano
+							Value: "{0}"
+						}
+
+						2: {
+							Key: Atraso da arrancada longa
+							Value: "{0}s"
+						}
+					}
+				}
+
+				Super: {
+					Name: TRANSFUSÃO
+					Description: Com uma ajudinha de morcegos-vampiros, Mortis suga a saúde de Brawlers inimigos para restaurar a sua própria. Que nojo!
+
+					Stats: {
+						1: {
+							Key: Dano
+							Value: "{0}"
+						}
+
+						2: {
+							Key: Cura por dano
+							Value: "{0}%"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: BUMERANGUE SANGUINÁRIO
+					Description: Transfusão agora volta ao Mortis, possibilitando o dobro de dano e de cura.
+
+					Stats: {
+						1: {
+							Key: VELOCIDADE
+							Value: +{0}%
+						}
+
+						2: {
+							Key: DANO
+							Value: +{0}%
+						}
+
+						3: {
+							Key: ESCUDO
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: PÁ RODOPIANTE
+				Description: Mortis gira a pá e acerta todos os inimigos à sua volta, infligindo {0} pontos de dano.
+			}
+
+			2: {
+				Name: PÁ DE SOBREVIVÊNCIA
+				Description: Mortis recarrega mais rapidamente por {0} segundos.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: COLETA SINISTRA
+				Description: Mortis ceifa a essência vital dos Brawlers que derrota, recuperando {0} da saúde total.
+			}
+
+			2: {
+				Name: BOTE LETAL
+				Description: Mortis ganha uma arrancada maior {0} segundo mais rápido.
+			}
+		}
+	}
+
+	MORTIS_Item: {
+		DisplayName: MORTIS's Shovel
+		Tooltip: ""
+	}
+
+	// MORTIS_ProjectileAttack.DisplayName: M O R T I S_ Projectile Attack
+	// MORTIS_ProjectileGadget1.DisplayName: M O R T I S_ Projectile Gadget1
+	// MORTIS_ProjectileSuper.DisplayName: M O R T I S_ Projectile Super
+}

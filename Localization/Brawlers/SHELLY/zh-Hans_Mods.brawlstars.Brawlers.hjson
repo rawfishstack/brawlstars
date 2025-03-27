@@ -1,0 +1,87 @@
+SHELLY: {
+	SHELLY_Info: {
+		BrawlerDescription: 雪莉是最棒的巡逻员：可靠、顽强，擅长使用霰弹枪。她实在不明白柯尔特为什么一定要抢她的风头......
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: 大口径霰弹枪
+					Description: 雪莉的霰弹枪可大范围射出多枚射程中等的弹丸，命中敌人的弹丸越多，造成的伤害越高。
+
+					Stats: {
+						1: {
+							Key: 伤害
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: 超级霰弹
+					Description: 雪莉的超级霰弹可摧毁掩体直击对手。被命中的敌人即使未被击倒也会被击退。
+
+					Stats: {
+						1: {
+							Key: 伤害
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: 双管霰弹
+					Description: 超级霰弹的攻击范围扩大{0}。
+
+					Stats: {
+						1: {
+							Key: 速度
+							Value: +{0}%
+						}
+
+						2: {
+							Key: 伤害
+							Value: +{0}%
+						}
+
+						3: {
+							Key: 护盾
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: 冲刺跑鞋
+				Description: 雪莉向前冲刺，不含任何多余操作！
+			}
+
+			2: {
+				Name: 陶土飞靶
+				Description: 激活后，在接下来的{0}秒内，雪莉普通攻击的射程将会提升，弹丸也会集中在更窄的区域内。
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: 震荡射击
+				Description: 雪莉的超级霰弹可使敌人的移动速度降低，持续{0}秒。
+			}
+
+			2: {
+				Name: 快速包扎
+				Description: 雪莉的生命值降至{0}以下时，将立即恢复{1}生命值。快速包扎的冷却时间为{2}秒。
+			}
+		}
+	}
+
+	SHELLY_Item: {
+		DisplayName: 雪莉的霰弹枪
+		Tooltip: ""
+	}
+}

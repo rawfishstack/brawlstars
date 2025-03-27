@@ -1,0 +1,87 @@
+SHELLY: {
+	SHELLY_Info: {
+		BrawlerDescription: Shelly è la ranger perfetta: affidabile, tosta e letale col fucile. Ma nonostante tutte queste qualità, Colt riesce sempre a rubarle la scena...
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: FUCILE A PALLETTONI
+					Description: Il fucile di Shelly è ideale per farcire di piombo inemici a media distanza. Più pallettoni colpiscono il malcapitato, più male fa.
+
+					Stats: {
+						1: {
+							Key: Danni
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: SUPERPALLETTONI
+					Description: La super di Shelly disintegra qualsiasi copertura e fa piazza pulita dei nemici. Chiunque sopravviva viene sbalzato all'indietro.
+
+					Stats: {
+						1: {
+							Key: Danni
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: FUCILE A CANNE MOZZE
+					Description: Il raggio di Superpallettoni aumenta del {0}.
+
+					Stats: {
+						1: {
+							Key: VELOCITÀ
+							Value: +{0}%
+						}
+
+						2: {
+							Key: DANNI
+							Value: +{0}%
+						}
+
+						3: {
+							Key: DIFESA
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: TURBOSTIVALI
+				Description: Shelly fa uno scatto in avanti per sorprendere i nemici.
+			}
+
+			2: {
+				Name: PIATTELLI
+				Description: Nei {0} secondi successivi all'attivazione del gadget, gli attacchi normali di Shelly copriranno un'area inferiore e avranno una portata maggiore.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: SHOCK AL PIOMBO
+				Description: I superpallettoni di Shelly rallentano i nemici per {0} secondi.
+			}
+
+			2: {
+				Name: CEROTTI
+				Description: Quando la sua salute è inferiore al {0}, Shelly ne recupera immediatamente {1} unità. L'abilità torna disponibile dopo {2} secondi.
+			}
+		}
+	}
+
+	SHELLY_Item: {
+		DisplayName: SHELLY's Shotgun
+		Tooltip: ""
+	}
+}

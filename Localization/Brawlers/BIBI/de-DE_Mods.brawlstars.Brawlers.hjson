@@ -1,0 +1,90 @@
+BIBI: {
+	BIBI_Info: {
+		BrawlerDescription: Bibi ist eine taffe Unruhestifterin, die sich nicht scheut, ihren Baseballschläger einzusetzen. Sie hat auch eine nerdige Seite, die sie aber nie zeigen würde. Sie muss schließlich ihr Image wahren!
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: ALLER GUTEN DINGE SIND DREI
+					Description: Bibi schwingt ihren Baseballschläger. Nach drei Schwüngen lädt sich ihr Homerun-Balken auf. Ist der Balken vollständig aufgeladen, stößt Bibis nächster Schwung Feinde zurück!
+
+					Stats: {
+						1: {
+							Key: Schaden
+							Value: "{0}"
+						}
+					}
+				}
+
+				Super: {
+					Name: KAUGUMMIBALL
+					Description: Bibi schlägt einen herumspringenden Kaugummiball, der Gegner durchschlagen und das gleiche Ziel sogar mehrfach treffen kann!
+
+					Stats: {
+						1: {
+							Key: Schaden
+							Value: "{0}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: INS AUS
+					Description: Bibis herumspringender Ball teilt sich, wenn er auf einen Gegner trifft.
+
+					Stats: {
+						1: {
+							Key: TEMPO
+							Value: +{0}%
+						}
+
+						2: {
+							Key: SCHADEN
+							Value: +{0}%
+						}
+
+						3: {
+							Key: SCHILD
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: VITAMINBOOSTER
+				Description: Bibi heilt sich {1} Sekunden lang um {0} Trefferpunkte pro Sekunde.
+			}
+
+			2: {
+				Name: EXTRAKLEBRIG
+				Description: Bibis nächster Kaugummiball verlangsamt Gegner bei einem Treffer für {0} Sekunden!
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: HOMERUN
+				Description: Ist Bibis Homerun-Balken vollständig aufgeladen, erhöht sich ihr Bewegungstempo um {0}.
+			}
+
+			2: {
+				Name: INTENSIV DEFENSIV
+				Description: Ist Bibis Homerun-Balken vollständig aufgeladen, wird jeglicher Schaden, den sie erleidet, um {0} reduziert.
+			}
+		}
+	}
+
+	BIBI_Item: {
+		DisplayName: BIBI's Baseball bat
+		Tooltip: ""
+	}
+
+	// BIBI_ProjectileAttack.DisplayName: B I B I_ Projectile Attack
+	// BIBI_ProjectileSuper.DisplayName: B I B I_ Projectile Super
+}

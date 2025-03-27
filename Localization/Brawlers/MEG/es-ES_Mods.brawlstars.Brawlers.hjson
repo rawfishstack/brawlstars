@@ -1,0 +1,142 @@
+MEG: {
+	MEG_Info: {
+		BrawlerDescription: Meg, enfundada en su traje meca, se encarga entre bambalinas de solucionar los problemas de verdad mientras Max y Surge se dedican a entretener al público.
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: OBJETIVO LOCALIZADO
+					Description: Meg realiza un disparo corto con su pistola láser que pone a prueba la paciencia de sus enemigos.
+
+					Stats: {
+						1: {
+							Key: Daño
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: MEGAMÁQUINA
+					Description: Meg se mete de un salto en su meca ¡y empieza a sembrar el caos!
+
+					Stats: {
+						1: {
+							Key: Tiempo de transformación
+							Value: "{0}s"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: ""
+					Description: ""
+
+					Stats: {
+						1: {
+							Key: VELOCIDAD
+							Value: +{0}%
+						}
+
+						2: {
+							Key: DAÑO
+							Value: +{0}%
+						}
+
+						3: {
+							Key: ESCUDO
+							Value: +{0}%
+						}
+					}
+				}
+			}
+
+			2: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: CONTROL DE MULTITUDES
+					Description: Una ráfaga de balas que no deja nada al azar. ¡Es la manera más rápida de deshacerse de multitudes!
+
+					Stats: {
+						1: {
+							Key: Daño
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: GOLPE DE ACERO
+					Description: El meca utiliza su formidable brazo para golpear sin piedad a los enemigos cercanos, ¡y vaya si sienten los golpes!
+
+					Stats: {
+						1: {
+							Key: Daño
+							Value: "{0}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: ""
+					Description: ""
+
+					Stats: {
+						1: {
+							Key: VELOCIDAD
+							Value: +{0}%
+						}
+
+						2: {
+							Key: DAÑO
+							Value: +{0}%
+						}
+
+						3: {
+							Key: ESCUDO
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: DESCARGA ELÉCTRICA
+				Description: El meca recupera {0}puntos de salud por segundo durante {1}segundos.
+			}
+
+			2: {
+				Name: CAJA DE HERRAMIENTAS
+				Description: Meg suelta su caja de herramientas, que aumenta la velocidad de recarga de los aliados cercanos en un {0} hasta ser destruida.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: CAMPO DE FUERZA
+				Description: Cuando su meca es destruido, Meg queda protegida por un escudo de un {0} durante {1}segundos.
+			}
+
+			2: {
+				Name: AUTODESTRUCCIÓN
+				Description: Cuando se le acaba la salud al meca, el traje explota, causando {0}puntos de daño a los enemigos cercanos y empujándolos hacia atrás.
+			}
+		}
+	}
+
+	MEG_Item: {
+		DisplayName: MEG's Blaster that pokes
+		Tooltip: ""
+	}
+
+	// MEG_ProjectileAttack1.DisplayName: M E G_ Projectile Attack1
+	// MEG_ProjectileAttack2.DisplayName: M E G_ Projectile Attack2
+	// MEG_ProjectileSuper2.DisplayName: M E G_ Projectile Super2
+}

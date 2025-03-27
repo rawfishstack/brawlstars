@@ -1,0 +1,85 @@
+TooltipInfo: {
+	ItemTooltip: {
+		Rarity: Pедкие
+		HeroStats: ПОКАЗАТЕЛИ БОЙЦА
+		Traits: ОСОБЕННОСТЬ
+		Attack: АТАКА
+		Super: СУПЕР
+		Gadget: ГАДЖЕТ
+		StarPower: ЗВЁЗДНАЯ СИЛА
+		HyperCharge: ГИПЕРЗАРЯД
+		// Select: Select
+		// Use: Use
+		// Selected: Selected
+		// NotImplemented: Not implemented
+	}
+
+	Rarities: {
+		Starting: НАЧАЛЬНЫЙ БОЕЦ
+		Rare: Редкий
+		SuperRare: Сверхредкий
+		Epic: Эпический
+		Mythic: Мифический
+		Legendary: Легендарный
+	}
+}
+
+Keybinds: {
+	// GadgetSelect.DisplayName: Select "GADGET"
+	// StarPowerSelect.DisplayName: Select "STAR POWER"
+	// GadgetUse.DisplayName: Use "GADGET"
+	// HyperChargeUse.DisplayName: Use "HYPERCHARGE"
+}
+
+Configs: {
+	ServerConfig: {
+		// DisplayName: Server Config
+
+		Headers: {
+			// Balances: Balances
+			// Developer: Developer
+		}
+
+		DamageValueNormalization: {
+			// Label: Damage Value Normalization
+			/* Tooltip:
+				'''
+				The damage value caused by attacking players is adjusted
+				according to the health value of the Brawler represented by
+				the Brawler Item they hold. For players who do not hold such
+				items, they are regarded as Brawlers with 5000 health value.
+				''' */
+		}
+
+		DebugMode: {
+			// Label: Debug Mode
+			// Tooltip: ""
+		}
+	}
+
+	ClientConfig: {
+		// DisplayName: Client Config
+
+		Headers: {
+			// Graphics: Graphics
+			// Developer: Developer
+		}
+
+		RenderQuality: {
+			// Label: Render Quality
+			// Tooltip: ""
+		}
+
+		DebugMode: {
+			// Label: Debug Mode
+			// Tooltip: ""
+		}
+	}
+
+	RenderQualityEnum: {
+		// Tooltip: ""
+		// Low.Label: Low
+		// Medium.Label: Medium
+		// High.Label: High
+	}
+}

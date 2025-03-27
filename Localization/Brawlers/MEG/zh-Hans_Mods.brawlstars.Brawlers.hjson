@@ -1,0 +1,142 @@
+MEG: {
+	MEG_Info: {
+		BrawlerDescription: 梅格对自己负责的幕后工作很满意，她会驾驶着坚实可靠的机甲处理一些真正的问题，而麦克斯和瑟奇则负责在人前逗乐。
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: 索敌开火
+					Description: 梅格用爆能手枪快速射击，让敌人烦不胜烦。
+
+					Stats: {
+						1: {
+							Key: 伤害
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: 重装出击
+					Description: 梅格跳进自己的强袭机甲，威震全场！
+
+					Stats: {
+						1: {
+							Key: 变形耗时
+							Value: "{0}秒"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: ""
+					Description: ""
+
+					Stats: {
+						1: {
+							Key: 速度
+							Value: +{0}%
+						}
+
+						2: {
+							Key: 伤害
+							Value: +{0}%
+						}
+
+						3: {
+							Key: 护盾
+							Value: +{0}%
+						}
+					}
+				}
+			}
+
+			2: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: 火力压制
+					Description: 枪林弹雨，毫不留情，这就是最快清退群敌的秘诀！
+
+					Stats: {
+						1: {
+							Key: 伤害
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: 铁臂无情
+					Description: 梅格操纵机甲猛挥机械铁臂，让敌人看着就怕，挨着就疼！
+
+					Stats: {
+						1: {
+							Key: 伤害
+							Value: "{0}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: ""
+					Description: ""
+
+					Stats: {
+						1: {
+							Key: 速度
+							Value: +{0}%
+						}
+
+						2: {
+							Key: 伤害
+							Value: +{0}%
+						}
+
+						3: {
+							Key: 护盾
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: 震荡电压
+				Description: 强袭机甲每秒恢复{0}生命值，持续{1}秒。
+			}
+
+			2: {
+				Name: 工具箱
+				Description: 梅格扔出她的工具箱，工具箱被摧毁前可将附近友军的装弹速度提升{0}。
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: 防御力场
+				Description: 强袭机甲被摧毁时，梅格将获得一个持续{1}秒的护盾，使自己受到的伤害减少{0}。
+			}
+
+			2: {
+				Name: 重型机甲
+				Description: 梅格的强袭形态结束时，她的机甲会自动爆炸，对附近的敌人造成{0}伤害并将他们击退。
+			}
+		}
+	}
+
+	MEG_Item: {
+		DisplayName: 梅格的爆能手枪
+		Tooltip: ""
+	}
+
+	// MEG_ProjectileAttack1.DisplayName: M E G_ Projectile Attack1
+	// MEG_ProjectileAttack2.DisplayName: M E G_ Projectile Attack2
+	// MEG_ProjectileSuper2.DisplayName: M E G_ Projectile Super2
+}

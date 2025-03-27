@@ -1,0 +1,87 @@
+SHELLY: {
+	SHELLY_Info: {
+		BrawlerDescription: Shelly's the perfect ranger: reliable, tough, and terrific with her shotgun. She never understood why Colt got to steal the limelight...
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: BUCKSHOT
+					Description: Shelly's boomstick fires a wide spread of pellets to a medium range. The more pellets hit, the greater the damage.
+
+					Stats: {
+						1: {
+							Key: Damage
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: SUPER SHELL
+					Description: Shelly's Super Shell obliterates both cover and enemies. Any survivors get knocked back.
+
+					Stats: {
+						1: {
+							Key: Damage
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: DOUBLE BARREL
+					Description: Super Shell is {0} larger.
+
+					Stats: {
+						1: {
+							Key: SPEED
+							Value: +{0}%
+						}
+
+						2: {
+							Key: DAMAGE
+							Value: +{0}%
+						}
+
+						3: {
+							Key: SHIELD
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: FAST FORWARD
+				Description: Shelly dashes ahead, skipping a few unnecessary steps!
+			}
+
+			2: {
+				Name: CLAY PIGEONS
+				Description: On activation, for the next {0} seconds Shelly's main attacks focus the fire to a smaller area with an increased range.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: SHELL SHOCK
+				Description: Shelly's Super shells slow down enemies for {0} seconds!
+			}
+
+			2: {
+				Name: BAND-AID
+				Description: When Shelly falls below {0} health, she instantly heals for {1} health. Band-Aid recharges in {2} seconds.
+			}
+		}
+	}
+
+	SHELLY_Item: {
+		DisplayName: SHELLY's Shotgun
+		Tooltip: ""
+	}
+}

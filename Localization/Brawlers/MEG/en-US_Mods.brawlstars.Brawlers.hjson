@@ -1,0 +1,142 @@
+MEG: {
+	MEG_Info: {
+		BrawlerDescription: Content to work behind the scenes with her trusty mecha suit, Meg takes care of real problems, while Max and Surge are out entertaining the crowds.
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: TARGET ACQUIRED
+					Description: Meg fires a short burst from her blaster that pokes at her enemies' patience.
+
+					Stats: {
+						1: {
+							Key: Damage
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: MEGA MACHINA
+					Description: Meg jumps into her Mecha suit for some colossal carnage!
+
+					Stats: {
+						1: {
+							Key: Change delay
+							Value: "{0}s"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: ""
+					Description: ""
+
+					Stats: {
+						1: {
+							Key: SPEED
+							Value: +{0}%
+						}
+
+						2: {
+							Key: DAMAGE
+							Value: +{0}%
+						}
+
+						3: {
+							Key: SHIELD
+							Value: +{0}%
+						}
+					}
+				}
+			}
+
+			2: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: CROWD CONTROL
+					Description: A strong barrage of bullets that leaves nothing to chance. It's the quickest way to make crowds disperse!
+
+					Stats: {
+						1: {
+							Key: Damage
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: FEEL THE STEEL
+					Description: The Mecha swings a formidable forearm that enemies will see and feel.
+
+					Stats: {
+						1: {
+							Key: Damage
+							Value: "{0}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: ""
+					Description: ""
+
+					Stats: {
+						1: {
+							Key: SPEED
+							Value: +{0}%
+						}
+
+						2: {
+							Key: DAMAGE
+							Value: +{0}%
+						}
+
+						3: {
+							Key: SHIELD
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: JOLTING VOLTS
+				Description: Heal the Mecha by {0} health per second for {1} seconds.
+			}
+
+			2: {
+				Name: TOOLBOX
+				Description: Meg drops her toolbox, which increases the reload speed for nearby allies by {0} until it gets destroyed.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: FORCE FIELD
+				Description: Meg is protected by a {0} shield for {1} seconds when her Mecha is destroyed.
+			}
+
+			2: {
+				Name: HEAVY METAL
+				Description: Upon expiring, the Mecha suit explodes, dealing {0} damage to nearby opponents and pushing them away.
+			}
+		}
+	}
+
+	MEG_Item: {
+		DisplayName: MEG's Blaster that pokes
+		Tooltip: ""
+	}
+
+	MEG_ProjectileAttack1.DisplayName: M E G_ Projectile Attack1
+	MEG_ProjectileAttack2.DisplayName: M E G_ Projectile Attack2
+	MEG_ProjectileSuper2.DisplayName: M E G_ Projectile Super2
+}

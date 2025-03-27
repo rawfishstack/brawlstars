@@ -1,0 +1,142 @@
+MEG: {
+	MEG_Info: {
+		BrawlerDescription: Meg muss nicht unbedingt im Rampenlicht stehen. Sie lässt Max und Surge die Leute unterhalten und nimmt sich derweil in ihrem Roboteranzug der wahren Probleme an.
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: ZIEL ERFASST
+					Description: Meg feuert eine kurze Salve aus ihrem Blaster, welche die Geduld der Gegner auf die Probe stellt.
+
+					Stats: {
+						1: {
+							Key: Schaden
+							Value: "{0}x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: MEGAMASCHINE
+					Description: Meg springt in ihren Roboteranzug, um für kolossale Zerstörung zu sorgen!
+
+					Stats: {
+						1: {
+							Key: Wechselverzögerung
+							Value: "{0}s"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: ""
+					Description: ""
+
+					Stats: {
+						1: {
+							Key: TEMPO
+							Value: +{0}%
+						}
+
+						2: {
+							Key: SCHADEN
+							Value: +{0}%
+						}
+
+						3: {
+							Key: SCHILD
+							Value: +{0}%
+						}
+					}
+				}
+			}
+
+			2: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: ROBOTERRATATA
+					Description: Eine starke Salve, die nichts dem Zufall überlässt und Gegnern Respekt einflößt!
+
+					Stats: {
+						1: {
+							Key: Schaden
+							Value: "{0}x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: STAHLSCHWINGER
+					Description: Der Roboter schwingt seinen riesigen Arm und plättet so Gegner im Handumdrehen.
+
+					Stats: {
+						1: {
+							Key: Schaden
+							Value: "{0}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: ""
+					Description: ""
+
+					Stats: {
+						1: {
+							Key: TEMPO
+							Value: +{0}%
+						}
+
+						2: {
+							Key: SCHADEN
+							Value: +{0}%
+						}
+
+						3: {
+							Key: SCHILD
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: STROMSTARK
+				Description: Heilt den Roboteranzug {1} Sekunden lang um {0} Trefferpunkte pro Sekunde.
+			}
+
+			2: {
+				Name: WERKZEUGKASTEN
+				Description: Meg lässt ihren Werkzeugkasten fallen, wodurch die Nachladegeschwindigkeit von Verbündeten in der Nähe bis zu seiner Zerstörung um {0} erhöht wird.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: KRAFTFELD
+				Description: Wenn ihr Roboteranzug zerstört wird, wird Meg {1} Sekunden lang von einem {0}igen Schild geschützt.
+			}
+
+			2: {
+				Name: HEAVY METAL
+				Description: Wenn der Roboteranzug keine Trefferpunkte mehr hat, explodiert er, fügt Gegnern im Wirkungsbereich {0} Schaden zu und stößt sie zurück.
+			}
+		}
+	}
+
+	MEG_Item: {
+		DisplayName: MEG's Blaster that pokes
+		Tooltip: ""
+	}
+
+	// MEG_ProjectileAttack1.DisplayName: M E G_ Projectile Attack1
+	// MEG_ProjectileAttack2.DisplayName: M E G_ Projectile Attack2
+	// MEG_ProjectileSuper2.DisplayName: M E G_ Projectile Super2
+}

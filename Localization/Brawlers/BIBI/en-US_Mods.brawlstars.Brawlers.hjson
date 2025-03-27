@@ -1,0 +1,90 @@
+BIBI: {
+	BIBI_Info: {
+		BrawlerDescription: Bibi is a tough punk with a baseball bat and an attitude to match. She's a bit of a nerd too, but she'd never show it. She's got an image to maintain!
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: THREE STRIKES
+					Description: Bibi swings her baseball bat. When she has three swings at the ready, her Home Run bar will charge. Once fully charged, her next swing will knock back enemies!
+
+					Stats: {
+						1: {
+							Key: Damage
+							Value: "{0}"
+						}
+					}
+				}
+
+				Super: {
+					Name: SPITBALL
+					Description: Bibi bats a bouncing ball of bubble gum that can go through enemies, and even hit the same target multiple times!
+
+					Stats: {
+						1: {
+							Key: Damage
+							Value: "{0}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: OUT OF BOUNDS
+					Description: Bibi's bouncing ball splits when hitting an enemy
+
+					Stats: {
+						1: {
+							Key: SPEED
+							Value: +{0}%
+						}
+
+						2: {
+							Key: DAMAGE
+							Value: +{0}%
+						}
+
+						3: {
+							Key: SHIELD
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: VITAMIN BOOSTER
+				Description: Bibi heals {0} health per second for {1} seconds.
+			}
+
+			2: {
+				Name: EXTRA STICKY
+				Description: Bibi's next Spitball slows down enemies on hit for {0} seconds!
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: HOME RUN
+				Description: Bibi's movement speed is increased by {0} when her Home Run bar is fully charged.
+			}
+
+			2: {
+				Name: BATTING STANCE
+				Description: When Bibi's Homerun bar is fully charged, she shields herself from all damage by {0}.
+			}
+		}
+	}
+
+	BIBI_Item: {
+		DisplayName: BIBI's Baseball bat
+		Tooltip: ""
+	}
+
+	BIBI_ProjectileAttack.DisplayName: B I B I_ Projectile Attack
+	BIBI_ProjectileSuper.DisplayName: B I B I_ Projectile Super
+}

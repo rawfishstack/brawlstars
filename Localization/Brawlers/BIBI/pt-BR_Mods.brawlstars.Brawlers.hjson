@@ -1,0 +1,90 @@
+BIBI: {
+	BIBI_Info: {
+		BrawlerDescription: Bibi é uma punk durona com um taco de beisebol e muita atitude. Ela também é meio nerd, mas faz de tudo para esconder, afinal tem uma imagem a zelar!
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: TRÊS STRIKES
+					Description: Bibi ama rebater com seu taco de beisebol. Quando três rebatidas estiverem disponíveis, a barra de home run é carregada e, quando estiver cheia, as rebatidas empurram os inimigos!
+
+					Stats: {
+						1: {
+							Key: Dano
+							Value: "{0}"
+						}
+					}
+				}
+
+				Super: {
+					Name: BOLA DE GOMA
+					Description: Bibi rebate uma bola de goma que atravessa os inimigos e pode acertar o mesmo alvo diversas vezes.
+
+					Stats: {
+						1: {
+							Key: Dano
+							Value: "{0}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: FORA DO LIMITE
+					Description: A bola de goma da Bibi se reparte ao atingir um inimigo.
+
+					Stats: {
+						1: {
+							Key: VELOCIDADE
+							Value: +{0}%
+						}
+
+						2: {
+							Key: DANO
+							Value: +{0}%
+						}
+
+						3: {
+							Key: ESCUDO
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: VITAMINA
+				Description: Bibi recupera {0} pontos de saúde por {1} segundos.
+			}
+
+			2: {
+				Name: MEGAGRUDE
+				Description: A próxima Bola de Goma da Bibi desacelera os inimigos atingidos durante {0} segundos!
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: HOME RUN
+				Description: A velocidade de locomoção da Bibi aumenta em {0} quando a barra de home run está cheia.
+			}
+
+			2: {
+				Name: REBATEDORA DE ATAQUES
+				Description: Quando a barra de home run está totalmente carregada, Bibi reduz o impacto do dano recebido em {0}.
+			}
+		}
+	}
+
+	BIBI_Item: {
+		DisplayName: BIBI's Baseball bat
+		Tooltip: ""
+	}
+
+	// BIBI_ProjectileAttack.DisplayName: B I B I_ Projectile Attack
+	// BIBI_ProjectileSuper.DisplayName: B I B I_ Projectile Super
+}

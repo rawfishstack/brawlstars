@@ -1,0 +1,142 @@
+MEG: {
+	MEG_Info: {
+		BrawlerDescription: Depuis les coulisses, Meg s'occupe des vrais problèmes dans sa tenue mécha, tandis que Max et Surge divertissent la foule.
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: CIBLE VERROUILLÉE
+					Description: Meg utilise son pistolet-laser pour tirer des boules d'énergie et jouer avec les nerfs de ses adversaires.
+
+					Stats: {
+						1: {
+							Key: Dégâts
+							Value: "{1} x {0}"
+						}
+					}
+				}
+
+				Super: {
+					Name: MÉGA MACHINA
+					Description: Meg se réfugie dans son armure mécha pour semer la destruction.
+
+					Stats: {
+						1: {
+							Key: Déploiement
+							Value: "{0}s"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: ""
+					Description: ""
+
+					Stats: {
+						1: {
+							Key: VITESSE
+							Value: + {0}%
+						}
+
+						2: {
+							Key: DÉGÂTS
+							Value: + {0}%
+						}
+
+						3: {
+							Key: BOUCLIER
+							Value: + {0}%
+						}
+					}
+				}
+			}
+
+			2: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: CONTRÔLE DE FOULE
+					Description: Un barrage de balles qui ne laisse rien au hasard. Pour disperser une foule, il n'y a pas plus efficace.
+
+					Stats: {
+						1: {
+							Key: Dégâts
+							Value: "{1} x {0}"
+						}
+					}
+				}
+
+				Super: {
+					Name: LE FROID DE L'ACIER
+					Description: Avec son bras, le mécha lance un coup que ses ennemis n'auront pas le temps de voir venir... mais qu'ils sentiront passer.
+
+					Stats: {
+						1: {
+							Key: Dégâts
+							Value: "{0}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: ""
+					Description: ""
+
+					Stats: {
+						1: {
+							Key: VITESSE
+							Value: + {0}%
+						}
+
+						2: {
+							Key: DÉGÂTS
+							Value: + {0}%
+						}
+
+						3: {
+							Key: BOUCLIER
+							Value: + {0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: PIÈCE DE REMPLACEMENT
+				Description: Le mécha récupère {0}points de santé par seconde pendant {1}secondes.
+			}
+
+			2: {
+				Name: BOÎTE À OUTILS
+				Description: Meg pose sa boîte à outils, augmentant ainsi la vitesse de rechargement de ses équipiers de {0} jusqu'à ce que la boîte soit détruite.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: CHAMP DE FORCE
+				Description: Meg est protégée par un bouclier de {0} pendant {1}seconde(s) lorsque son mécha est détruit.
+			}
+
+			2: {
+				Name: HEAVY METAL
+				Description: Une fois détruit, le mécha explose et inflige {0}points de dégâts aux ennemis proches et les repousse.
+			}
+		}
+	}
+
+	MEG_Item: {
+		DisplayName: MEG's Blaster that pokes
+		Tooltip: ""
+	}
+
+	// MEG_ProjectileAttack1.DisplayName: M E G_ Projectile Attack1
+	// MEG_ProjectileAttack2.DisplayName: M E G_ Projectile Attack2
+	// MEG_ProjectileSuper2.DisplayName: M E G_ Projectile Super2
+}

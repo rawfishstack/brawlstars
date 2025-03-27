@@ -1,0 +1,101 @@
+MORTIS: {
+	MORTIS_Info: {
+		BrawlerDescription: Mortis had grand designs built around being a mortician and a vampire, but the fact that nobody is dying at Starr Park has put a huge damper on his plans.
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: SHOVEL SWING
+					Description: Mortis dashes forward with a sharp swing of his shovel, creating business opportunities for himself. When he has all three dashes ready, he'll gain a longer dash after a short delay.
+
+					Stats: {
+						1: {
+							Key: Damage
+							Value: "{0}"
+						}
+
+						2: {
+							Key: Long dash delay
+							Value: "{0}s"
+						}
+					}
+				}
+
+				Super: {
+					Name: LIFE BLOOD
+					Description: Mortis calls forth a swarm of vampire bats that drain the health of enemy Brawlers while restoring his. Creepy!
+
+					Stats: {
+						1: {
+							Key: Damage
+							Value: "{0}"
+						}
+
+						2: {
+							Key: Healing from damage
+							Value: "{0}%"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: BLOOD BOOMERANG
+					Description: Life Blood now also returns to Mortis, allowing for double damage and healing.
+
+					Stats: {
+						1: {
+							Key: SPEED
+							Value: +{0}%
+						}
+
+						2: {
+							Key: DAMAGE
+							Value: +{0}%
+						}
+
+						3: {
+							Key: SHIELD
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: COMBO SPINNER
+				Description: Mortis spins his shovel, hitting all enemies around himself for {0} damage.
+			}
+
+			2: {
+				Name: SURVIVAL SHOVEL
+				Description: Mortis reloads faster for {0} seconds.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: CREEPY HARVEST
+				Description: Mortis reaps the life essence of Brawlers he defeats, restoring {0} of his max health.
+			}
+
+			2: {
+				Name: COILED SNAKE
+				Description: Mortis gains his longer dash {0} seconds faster.
+			}
+		}
+	}
+
+	MORTIS_Item: {
+		DisplayName: MORTIS's Shovel
+		Tooltip: ""
+	}
+
+	MORTIS_ProjectileAttack.DisplayName: M O R T I S_ Projectile Attack
+	MORTIS_ProjectileGadget1.DisplayName: M O R T I S_ Projectile Gadget1
+	MORTIS_ProjectileSuper.DisplayName: M O R T I S_ Projectile Super
+}

@@ -1,0 +1,101 @@
+MORTIS: {
+	MORTIS_Info: {
+		BrawlerDescription: Il sogno di Mortis era quello di diventare un becchino e un vampiro illustre. Un sogno rispettabilissimo (forse), peccato che nello Starr Park nessuno tiri le cuoia...
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: PALATA
+					Description: Mortis scatta in avanti agitando la pala e procurandosi allo stesso tempo nuove opportunità di lavoro. Quando tutti e tre gli scatti sono pronti, il primo coprirà una distanza maggiore, se si aspetta qualche secondo.
+
+					Stats: {
+						1: {
+							Key: Danni
+							Value: "{0}"
+						}
+
+						2: {
+							Key: Caricamento scatto esteso
+							Value: "{0}s"
+						}
+					}
+				}
+
+				Super: {
+					Name: SUCCHIASANGUE
+					Description: Mortis chiama a sé uno stormo di pipistrelli che, succhiando la salute dei brawler nemici, curano quella del loro padrone. Disgustoso...
+
+					Stats: {
+						1: {
+							Key: Danni
+							Value: "{0}"
+						}
+
+						2: {
+							Key: Cura dai danni
+							Value: "{0}%"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: BOOMERANG SUCCHIASANGUE
+					Description: Lo stormo di pipistrelli della super ritorna da Mortis, permettendogli così di causare il doppio dei danni e ricevere il doppio delle cure.
+
+					Stats: {
+						1: {
+							Key: VELOCITÀ
+							Value: +{0}%
+						}
+
+						2: {
+							Key: DANNI
+							Value: +{0}%
+						}
+
+						3: {
+							Key: DIFESA
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: PALA ROTANTE
+				Description: Mortis rotea la pala, infliggendo {0}punti danno a tutti inemici vicini.
+			}
+
+			2: {
+				Name: PALA DA SOPRAVVIVENZA
+				Description: Mortis ricarica gli attacchi più velocemente per {0} secondi.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: TETRO RACCOLTO
+				Description: Mortis miete le anime dei brawler che sconfigge, recuperando così il {0} dei suoi punti salute massimi.
+			}
+
+			2: {
+				Name: TURBOSCATTO
+				Description: Mortis attiva lo scatto esteso {0} secondo/i più velocemente.
+			}
+		}
+	}
+
+	MORTIS_Item: {
+		DisplayName: MORTIS's Shovel
+		Tooltip: ""
+	}
+
+	// MORTIS_ProjectileAttack.DisplayName: M O R T I S_ Projectile Attack
+	// MORTIS_ProjectileGadget1.DisplayName: M O R T I S_ Projectile Gadget1
+	// MORTIS_ProjectileSuper.DisplayName: M O R T I S_ Projectile Super
+}

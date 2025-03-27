@@ -1,0 +1,87 @@
+SHELLY: {
+	SHELLY_Info: {
+		BrawlerDescription: Shelly es la tiradora perfecta: donde pone el ojo, pone la bala. No entiende por qué Colt es quien siempre se lleva todas las miradas...
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: PERDIGONES
+					Description: El arma de Shelly dispara una ráfaga de proyectiles de medio alcance. Mientras más perdigones impacten al objetivo, mayor será el daño.
+
+					Stats: {
+						1: {
+							Key: Daño
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: SUPERBALAS
+					Description: El superataque de Shelly arrasa con los refugios y con los enemigos. Quien sobreviva recibirá un impacto hacia atrás.
+
+					Stats: {
+						1: {
+							Key: Daño
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: A DOS CAÑONES
+					Description: El radio de acción de las Superbalas es un{0} mayor.
+
+					Stats: {
+						1: {
+							Key: VELOCIDAD
+							Value: +{0}%
+						}
+
+						2: {
+							Key: DAÑO
+							Value: +{0}%
+						}
+
+						3: {
+							Key: ESCUDO
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: PASO AL FRENTE
+				Description: Shelly arremete hacia adelante ¡con una velocidad envidiable!
+			}
+
+			2: {
+				Name: TIRO AL PLATO
+				Description: Durante los siguientes {0}segundos, el ataque principal de Shelly se centra en disparar a una zona más reducida con un alcance más largo.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: CHOQUE MATE
+				Description: ¡Las superbalas de Shelly ralentizan a los enemigos durante {0} segundos!
+			}
+
+			2: {
+				Name: PRIMEROS AUXILIOS
+				Description: Cuando la salud de Shelly está por debajo del {0}, recupera {1} puntos de salud automáticamente. La habilidad tarda {2} segundos en recargarse.
+			}
+		}
+	}
+
+	SHELLY_Item: {
+		DisplayName: SHELLY's Shotgun
+		Tooltip: ""
+	}
+}

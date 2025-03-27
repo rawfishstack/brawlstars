@@ -1,0 +1,87 @@
+SHELLY: {
+	SHELLY_Info: {
+		BrawlerDescription: Shelly é a lutadora perfeita: confiável, durona e imbatível com a espingarda. Com tantas qualidades assim, ela nunca entendeu como o Colt virou o queridinho da galera...
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: CHUMBO GROSSO
+					Description: A arma da Shelly dispara chumbinhos em grande amplitude e alcance médio. Quanto mais chumbinhos acertarem o alvo, maior o dano.
+
+					Stats: {
+						1: {
+							Key: Dano
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: SUPERBALA
+					Description: A Superbala da Shelly oblitera coberturas e inimigos. Os sobreviventes são empurrados para longe.
+
+					Stats: {
+						1: {
+							Key: Dano
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: CANO DUPLO
+					Description: O raio da Superbala fica {0} maior.
+
+					Stats: {
+						1: {
+							Key: VELOCIDADE
+							Value: +{0}%
+						}
+
+						2: {
+							Key: DANO
+							Value: +{0}%
+						}
+
+						3: {
+							Key: ESCUDO
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: FISGADOR
+				Description: Shelly sai em disparada para surpreender o inimigo!
+			}
+
+			2: {
+				Name: POMBOS DE ARGILA
+				Description: Após a ativação do acessório, durante os {0} segundos seguintes, o ataque principal da Shelly atingirá uma área menor, mas terá um alcance maior.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: XEQUE-MATE
+				Description: A Superbala da Shelly diminui a velocidade do inimigo por {0} segundos!
+			}
+
+			2: {
+				Name: TÔNICO REVIGORANTE
+				Description: Quando sua saúde está abaixo de {0}, Shelly recupera {1} pontos de saúde num piscar de olhos, mas é preciso esperar {2} segundos antes que a habilidade esteja disponível novamente.
+			}
+		}
+	}
+
+	SHELLY_Item: {
+		DisplayName: SHELLY's Shotgun
+		Tooltip: ""
+	}
+}

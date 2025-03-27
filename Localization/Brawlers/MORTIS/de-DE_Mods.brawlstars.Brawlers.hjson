@@ -1,0 +1,101 @@
+MORTIS: {
+	MORTIS_Info: {
+		BrawlerDescription: Mortis wirbt im Starr Park als Bestatter und Vampir für sich. Dass dort nie jemand stirbt, verheißt für seine berufliche Zukunft jedoch nichts Gutes.
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: SCHAUFELSCHWINGER
+					Description: Mortis schwingt seine Schaufel und schnellt vorwärts, wodurch sich für ihn Geschäftsgelegenheiten ergeben. Wenn alle drei Sprünge aufgeladen sind, kann er nach einer kurzen Verzögerung einen größeren Sprung ausführen.
+
+					Stats: {
+						1: {
+							Key: Schaden
+							Value: "{0}"
+						}
+
+						2: {
+							Key: Verzögerung v. gr. Spr.
+							Value: "{0}s"
+						}
+					}
+				}
+
+				Super: {
+					Name: LEBENSRAUB
+					Description: Mortis ruft einen Schwarm blutsaugender Fledermäuse herbei, die Trefferpunkte gegnerischer Brawler stehlen und ihn heilen. Gruselig!
+
+					Stats: {
+						1: {
+							Key: Schaden
+							Value: "{0}"
+						}
+
+						2: {
+							Key: Durch Schd. erh. Heilung
+							Value: "{0}%"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: BLUTBUMERANG
+					Description: Lebensraub kehrt nun zu Mortis zurück und ermöglicht so doppelten Schaden und doppelte Heilung.
+
+					Stats: {
+						1: {
+							Key: TEMPO
+							Value: +{0}%
+						}
+
+						2: {
+							Key: SCHADEN
+							Value: +{0}%
+						}
+
+						3: {
+							Key: SCHILD
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: COMBO-KREISEL
+				Description: Mortis vollführt eine 360°-Schaufelattacke und verursacht {0} Schaden bei Gegnern in seinem Umkreis.
+			}
+
+			2: {
+				Name: ÜBERLEBENSSCHAUFEL
+				Description: Mortis lädt {0} Sekunden lang schneller nach.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: SEELENDIEB
+				Description: Mortis entzieht Brawlern, die er besiegt, Lebensessenz, wodurch er {0} seiner max. Trefferpunkte wiederherstellt.
+			}
+
+			2: {
+				Name: SCHNELLER ALS DAS AUGE
+				Description: Mortis‘ größerer Sprung wird {0} Sekunden schneller verfügbar.
+			}
+		}
+	}
+
+	MORTIS_Item: {
+		DisplayName: MORTIS's Shovel
+		Tooltip: ""
+	}
+
+	// MORTIS_ProjectileAttack.DisplayName: M O R T I S_ Projectile Attack
+	// MORTIS_ProjectileGadget1.DisplayName: M O R T I S_ Projectile Gadget1
+	// MORTIS_ProjectileSuper.DisplayName: M O R T I S_ Projectile Super
+}

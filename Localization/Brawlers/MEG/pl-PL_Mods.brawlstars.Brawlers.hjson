@@ -1,0 +1,142 @@
+MEG: {
+	MEG_Info: {
+		BrawlerDescription: Pracując za kulisami w swoim niezawodnym mechu, Meg rozwiązuje prawdziwe problemy, podczas gdy Maks i Surge zabawiajątłumy.
+
+		Heroes: {
+			1: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: CEL UZYSKANY
+					Description: Meg wystrzeliwuje krótką serię z blastera, wystawiając na próbę cierpliwość wrogów.
+
+					Stats: {
+						1: {
+							Key: Obrażenia
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: MEGA MACHINA
+					Description: Meg wskakuje do swojego pancerza Mechy, aby siać spustoszenie!
+
+					Stats: {
+						1: {
+							Key: Opóźnienie przemiany
+							Value: "{0}s"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: ""
+					Description: ""
+
+					Stats: {
+						1: {
+							Key: PRĘDKOŚĆ
+							Value: +{0}%
+						}
+
+						2: {
+							Key: OBRAŻENIA
+							Value: +{0}%
+						}
+
+						3: {
+							Key: TARCZA
+							Value: +{0}%
+						}
+					}
+				}
+			}
+
+			2: {
+				Traits: {
+				}
+
+				Attack: {
+					Name: KONTROLA NAD TŁUMEM
+					Description: Silna salwa pocisków nie pozostawia nic losowi. To najszybszy sposób na rozproszenie tłumu!
+
+					Stats: {
+						1: {
+							Key: Obrażenia
+							Value: "{0} x {1}"
+						}
+					}
+				}
+
+				Super: {
+					Name: POCZUJ STAL
+					Description: Mecha wymachuje ogromnym ramieniem, które wrogowie zobaczą i poczują na własnej skórze.
+
+					Stats: {
+						1: {
+							Key: Obrażenia
+							Value: "{0}"
+						}
+					}
+				}
+
+				HyperCharge: {
+					Name: ""
+					Description: ""
+
+					Stats: {
+						1: {
+							Key: PRĘDKOŚĆ
+							Value: +{0}%
+						}
+
+						2: {
+							Key: OBRAŻENIA
+							Value: +{0}%
+						}
+
+						3: {
+							Key: TARCZA
+							Value: +{0}%
+						}
+					}
+				}
+			}
+		}
+
+		Gadgets: {
+			1: {
+				Name: PODŁADOWANIE
+				Description: Mecha odzyskuje {0} pkt życia na sekundę przez {1} s.
+			}
+
+			2: {
+				Name: SKRZYNKA Z NARZĘDZIAMI
+				Description: Meg upuszcza swoją skrzynkęz narzędziami, która zwiększa szybkość przeładowania pobliskich sojuszników o {0}, aż skrzynka zostanie zniszczona.
+			}
+		}
+
+		StarPowers: {
+			1: {
+				Name: POLE SIŁOWE
+				Description: Gdy Mecha ulegnie zniszczeniu, Meg jest chroniona przez {0} tarczę przez {1} s.
+			}
+
+			2: {
+				Name: CIĘŻKA MASZYNA
+				Description: Gdy ulega zniszczeniu, kombinezon Mecha wybucha, przy czym zadaje pobliskim przeciwnikom {0} pkt. obrażeń oraz ich odpycha.
+			}
+		}
+	}
+
+	MEG_Item: {
+		DisplayName: MEG's Blaster that pokes
+		Tooltip: ""
+	}
+
+	// MEG_ProjectileAttack1.DisplayName: M E G_ Projectile Attack1
+	// MEG_ProjectileAttack2.DisplayName: M E G_ Projectile Attack2
+	// MEG_ProjectileSuper2.DisplayName: M E G_ Projectile Super2
+}
