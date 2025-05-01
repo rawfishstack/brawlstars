@@ -53,7 +53,7 @@ public class Behavior : BrawlerBehavior {
     private Texture2D Weapon2Left => RequestTexture("Weapon2_Left");
 
     private Texture2D WeaponTexture(int direction) {
-        return (HeroSlot == 0, direction == 1) switch {
+        return (BrawlerActionSlots[BrawlerActionAggregate.Hero] == 0, direction == 1) switch {
             (true, true) => Weapon1Right,
             (true, false) => Weapon1Left,
             (false, true) => Weapon2Right,
@@ -64,7 +64,8 @@ public class Behavior : BrawlerBehavior {
     public DrawData BuildDrawData(int direction) {
         var drawData = Player.BuildPlayerCenterDrawData(WeaponTexture(direction));
         drawData.destinationRectangle.FrontPlus(direction, Player.PlayerDrawHandOffset());
-        drawData.origin = drawData.texture.TextureCenter().PlusX(-direction * (HeroSlot == 0 ? 6 : 12));
+        drawData.origin = drawData.texture.TextureCenter()
+            .PlusX(-direction * (BrawlerActionSlots[BrawlerActionAggregate.Hero] == 0 ? 6 : 12));
         return drawData;
     }
 }

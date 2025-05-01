@@ -43,7 +43,10 @@ public class SuperView(BrawlerBehavior behavior) : ChargingView(behavior) {
     public override int Value => (int)Charge;
 
     public override Color ThemeColor => Value >= 100 ? _fillColor : _color;
-    public override string Tip => Behavior.BrawlerInfo.HeroInfos[Behavior.HeroSlot].Super.Name;
+
+    public override string Tip => Behavior.BrawlerInfo
+        .HeroInfos[Behavior.BrawlerActionSlots[BrawlerActionAggregate.Hero].Value].Super.Name;
+
     public override string TipColor => TooltipInfo.ItemTooltip.SuperColor;
 
     public override void Reset() {

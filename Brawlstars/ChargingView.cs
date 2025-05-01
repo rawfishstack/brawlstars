@@ -102,9 +102,9 @@ public abstract class ChargingView(BrawlerBehavior behavior)
     public abstract string TipColor { get; }
 
 
-    protected readonly UIImage UiImageCharging = new(Asset<Texture2D>.Empty);
-    protected readonly UIImage UiImageChargingBorder = new(ChargingBorderTexture);
-    protected UIText UiText = new(string.Empty);
+    protected UIImage UiImageCharging;
+    protected UIImage UiImageChargingBorder;
+    protected UIText UiText;
     private string LastText = string.Empty;
 
     protected static Asset<Texture2D> ChargingBorderTexture =>
@@ -137,10 +137,24 @@ public abstract class ChargingView(BrawlerBehavior behavior)
         }
     }
 
+    private bool _initialized = false;
+
+    public void Init() {
+        UiImageCharging = new(Asset<Texture2D>.Empty);
+        UiImageChargingBorder = new(ChargingBorderTexture);
+        UiText = new(string.Empty);
+    }
+
     public virtual void Show(BrawlerStateUiContainer ui) {
+        if (!_initialized) {
+            _initialized = true;
+            Init();
+        }
+
         if (Tip.Length == 0) {
             return;
         }
+
         LoadAllTextures();
 
         UiImageCharging.Width.Set(112, 0);

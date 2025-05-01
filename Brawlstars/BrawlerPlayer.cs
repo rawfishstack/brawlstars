@@ -8,10 +8,10 @@ public class BrawlerPlayer : ModPlayer {
     public override bool PreKill(double damage, int hitDirection, bool pvp, ref bool playSound, ref bool genDust,
         ref PlayerDeathReason damageSource) {
         if (BrawlerBehavior.FromPlayerHeld(Player) is Behavior behavior) {
-            if (behavior.HeroSlot == 1) {
+            if (behavior.BrawlerActionSlots[BrawlerActionAggregate.Hero] == BrawlerActionSlot.Second) {
                 playSound = false;
                 genDust = false;
-                behavior.HeroSlot = 0;
+                behavior.BrawlerActionSlots[BrawlerActionAggregate.Hero] = BrawlerActionSlot.First;
                 Player.Heal(500);
                 return false;
             }

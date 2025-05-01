@@ -9,7 +9,7 @@ using Terraria.ModLoader;
 namespace brawlstars.Brawlstars;
 
 public class BrawlerDrawLayer : PlayerDrawLayer {
-    private Action _action = Action.Static;
+    private BrawlerActionType _action = BrawlerActionType.Static;
 
     private ModItem? _currentItem;
     private ModItem? _oldItem;
@@ -51,51 +51,36 @@ public class BrawlerDrawLayer : PlayerDrawLayer {
 
     private void AllocateAnimation(BrawlerItem brawlerItem, ref PlayerDrawSet drawInfo) {
         var player = drawInfo.drawPlayer;
-        if (player.itemAnimation == 0) _action = Action.Static;
+        if (player.itemAnimation == 0) _action = BrawlerActionType.Static;
 
-        if (_action == Action.Static) {
+        if (_action == BrawlerActionType.Static) {
             _action = Controlled(player);
-            if (_action != Action.Static) ApplyUseAnimation(player, brawlerItem);
+            if (_action != BrawlerActionType.Static) ApplyUseAnimation(player, brawlerItem);
         }
 
-        switch (_action) {
-            case Action.Static: brawlerItem.Behavior.PostStaticAction(ref drawInfo); break;
-            case Action.Attack: brawlerItem.Behavior.PostAttackAction(ref drawInfo); break;
-            case Action.Super: brawlerItem.Behavior.PostSuperAction(ref drawInfo); break;
-            case Action.Gadget: brawlerItem.Behavior.PostGadgetAction(ref drawInfo); break;
-            case Action.HyperCharge: brawlerItem.Behavior.PostHyperChargeAction(ref drawInfo); break;
-            default: break;
-        }
+        brawlerItem.Behavior.PostBrawlerAction(_action, ref drawInfo);
 
         if (KeyBinds.GadgetSelectKeybind.JustPressed) brawlerItem.Behavior.PostGadgetSwitch();
 
         if (KeyBinds.StarPowerSelectKeybind.JustPressed) brawlerItem.Behavior.PostStarPowerSwitch();
     }
 
-    private static Action Controlled(Player player) {
+    private static BrawlerActionType Controlled(Player player) {
         if (player.itemAnimation > 0) {
-            if (player.altFunctionUse == 0) return Action.Attack;
+            if (player.altFunctionUse == 0) return BrawlerActionType.Attack;
 
-            if (player.altFunctionUse == 2) return Action.Super;
+            if (player.altFunctionUse == 2) return BrawlerActionType.Super;
         }
 
-        if (KeyBinds.GadgetUseKeybind.JustPressed) return Action.Gadget;
+        if (KeyBinds.GadgetUseKeybind.JustPressed) return BrawlerActionType.Gadget;
 
-        if (KeyBinds.HyperChargeUseKeybind.JustPressed) return Action.HyperCharge;
+        if (KeyBinds.HyperChargeUseKeybind.JustPressed) return BrawlerActionType.HyperCharge;
 
-        return Action.Static;
+        return BrawlerActionType.Static;
     }
 
 
     private static void ApplyUseAnimation(Player player, ModItem modItem) {
         player.itemAnimation = modItem.Item.useAnimation;
-    }
-
-    private enum Action {
-        Static,
-        Attack,
-        Super,
-        Gadget,
-        HyperCharge
     }
 }

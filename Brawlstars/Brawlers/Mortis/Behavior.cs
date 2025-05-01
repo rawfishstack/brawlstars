@@ -27,7 +27,7 @@ public class Behavior : BrawlerBehavior {
 
     protected override void InitHyperCharge() {
         base.InitHyperCharge();
-        HyperChargeMultiplier[0] = 40;
+        HyperChargeMultiplier[HeroSlot] = 40;
     }
 
     protected override void InitAllNotImplementationMarked() {

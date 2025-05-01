@@ -23,7 +23,7 @@ public class Behavior : BrawlerBehavior {
 
     protected override void InitHyperCharge() {
         base.InitHyperCharge();
-        HyperChargeMultiplier[0] = 30;
+        HyperChargeMultiplier[BrawlerActionSlots[BrawlerActionAggregate.Hero]] = 30;
     }
 
     protected override void InitAllNotImplementationMarked() {

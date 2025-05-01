@@ -20,7 +20,10 @@ public class GadgetView(BrawlerBehavior behavior) : ChargingView(behavior) {
     public override int Value => Progress / 3;
 
     public override Color ThemeColor => Value >= 100 ? _fillColor : _color;
-    public override string Tip => Behavior.BrawlerInfo.GadgetInfos[Behavior.GadgetSlot].Name;
+
+    public override string Tip => Behavior.BrawlerInfo
+        .GadgetInfos[Behavior.BrawlerActionSlots[BrawlerActionAggregate.Gadget].Value].Name;
+
     public override string TipColor => TooltipInfo.ItemTooltip.GadgetColor;
 
     public override void Reset() {

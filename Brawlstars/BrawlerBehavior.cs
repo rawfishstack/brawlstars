@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 using brawlstars.Brawlstars.BrawlerContent.CommonSound;
 using brawlstars.Brawlstars.Utils;
 using Terraria;
@@ -34,10 +32,11 @@ public abstract class BrawlerBehavior : AssetsSpace {
 
     private void Construct() {
         BeginBuildInfo();
-        CalCategories();
+        InitCategories();
+        InitActionSlots();
         InitHyperCharge();
+        InitActions();
         InitAllNotImplementationMarked();
-        ConstructAction();
     }
 
     public BrawlerInfo BrawlerInfo;
@@ -57,48 +56,34 @@ public abstract class BrawlerBehavior : AssetsSpace {
     }
 
 
-    protected virtual void CalCategories() {
-        HeroCategory = BrawlerInfo.HeroInfos.Length;
-        GadgetCategory = BrawlerInfo.GadgetInfos.Length;
-        StarPowerCategory = BrawlerInfo.StarPowerInfos.Length;
+    public Dictionary<BrawlerActionAggregate, BrawlerActionCategory> BrawlerActionCategories = new();
+
+    protected virtual void InitCategories() {
+        BrawlerActionCategories[BrawlerActionAggregate.Hero] = BrawlerActionCategory.One;
+        BrawlerActionCategories[BrawlerActionAggregate.Gadget] = BrawlerActionCategory.Two;
+        BrawlerActionCategories[BrawlerActionAggregate.StarPower] = BrawlerActionCategory.Two;
     }
 
     /// <summary>
     /// 极限充能效率，它是百分数。
     /// </summary>
-    public float[] HyperChargeMultiplier;
+    public Dictionary<BrawlerActionSlot, float> HyperChargeMultiplier = new();
 
     protected virtual void InitHyperCharge() {
-        HyperChargeMultiplier = HeroCategory.Array(_ => 0f);
+        for (var i = 0; i < BrawlerActionCategories[BrawlerActionAggregate.Hero].Value; i++) {
+            HyperChargeMultiplier[BrawlerActionSlot.Get(i)] = 0f;
+        }
     }
 
     protected virtual void InitAllNotImplementationMarked() {
         NotImplementedAll = false;
-        NotImplementedTraits = HeroCategory.Array(_ => false);
-        NotImplementedAttack = HeroCategory.Array(_ => false);
-        NotImplementedSuper = HeroCategory.Array(_ => false);
-        NotImplementedHyperCharge = HeroCategory.Array(_ => false);
-        NotImplementedGadget = GadgetCategory.Array(_ => false);
-        NotImplementedStarPower = StarPowerCategory.Array(_ => false);
+        NotImplementedTraits = BrawlerActionCategories[BrawlerActionAggregate.Hero].Value.Array(_ => false);
+        NotImplementedAttack = BrawlerActionCategories[BrawlerActionAggregate.Hero].Value.Array(_ => false);
+        NotImplementedSuper = BrawlerActionCategories[BrawlerActionAggregate.Hero].Value.Array(_ => false);
+        NotImplementedHyperCharge = BrawlerActionCategories[BrawlerActionAggregate.Hero].Value.Array(_ => false);
+        NotImplementedGadget = BrawlerActionCategories[BrawlerActionAggregate.Gadget].Value.Array(_ => false);
+        NotImplementedStarPower = BrawlerActionCategories[BrawlerActionAggregate.StarPower].Value.Array(_ => false);
     }
-
-    /// <summary>
-    /// 英雄形态种类，默认是1。
-    /// Traits，Attack，Super，HyperCharge的未实现标记的数组长度必须达到这个值。
-    /// </summary>
-    public int HeroCategory { get; protected set; }
-
-    /// <summary>
-    /// 妙具种类，默认是2。
-    /// Gadget的未实现标记的数组长度必须达到这个值。
-    /// </summary>
-    public int GadgetCategory { get; protected set; }
-
-    /// <summary>
-    /// 星辉种类，默认是2。
-    /// StarPower的未实现标记的数组长度必须达到这个值。
-    /// </summary>
-    public int StarPowerCategory { get; protected set; }
 
     // 未实现标记。
     public bool NotImplementedAll;
@@ -109,15 +94,65 @@ public abstract class BrawlerBehavior : AssetsSpace {
     public bool[] NotImplementedGadget;
     public bool[] NotImplementedStarPower;
 
+    public Dictionary<BrawlerActionAggregate, BrawlerActionSlot> BrawlerActionSlots = new();
+
+    protected virtual void InitActionSlots() {
+        HeroSlot = BrawlerActionSlot.First;
+        GadgetSlot = BrawlerActionSlot.Second;
+        StarPowerSlot = BrawlerActionSlot.Third;
+    }
+
+    public BrawlerActionSlot HeroSlot {
+        get => BrawlerActionSlots[BrawlerActionAggregate.Hero];
+        set => BrawlerActionSlots[BrawlerActionAggregate.Hero] = value;
+    }
+
+    public BrawlerActionSlot GadgetSlot {
+        get => BrawlerActionSlots[BrawlerActionAggregate.Gadget];
+        set => BrawlerActionSlots[BrawlerActionAggregate.Gadget] = value;
+    }
+
+    public BrawlerActionSlot StarPowerSlot {
+        get => BrawlerActionSlots[BrawlerActionAggregate.StarPower];
+        set => BrawlerActionSlots[BrawlerActionAggregate.StarPower] = value;
+    }
+
+
+    public Dictionary<BrawlerActionKey, IBrawlerAction<BrawlerBehavior>> BrawlerActions = new();
+
+    protected virtual void InitActions() {
+        GetType().GetFields()
+            .ForEach(field => {
+                    if (field.FieldType.IsSubclassOf(typeof(BrawlerAction<>).MakeGenericType(GetType()))) {
+                        var s = field.Name;
+                        foreach (var type in BrawlerActionType.All) {
+                            if (s.StartsWith(type.Name)) {
+                                var number = s[^1] - 49;
+                                if (number is >= 0 and <= 9) {
+                                } else {
+                                    number = 0;
+                                }
+
+                                var instance = NewInstance(field.FieldType);
+                                field.SetValue(this, instance);
+                                BrawlerActions[new BrawlerActionKey(type, BrawlerActionSlot.Get(number))] = instance;
+
+                                break;
+                            }
+                        }
+                    }
+                }
+            );
+    }
+
+    private IBrawlerAction<BrawlerBehavior> NewInstance(Type type) {
+        var action = (IBrawlerAction<BrawlerBehavior>)type.GetConstructor([]).Invoke([]);
+        action.SetBehavior(this);
+        return action;
+    }
+
     public bool SuperUsed { get; private set; }
     public bool GadgetUsed { get; private set; }
-
-    // 不能超过对应物品的对应装备的种类。
-    public int HeroSlot = 0;
-    public int GadgetSlot = 0;
-    public int StarPowerSlot = 0;
-
-
     public GadgetView GadgetView { get; }
     public SuperView SuperView { get; }
     public HyperChargeView HyperChargeView { get; }
@@ -128,20 +163,6 @@ public abstract class BrawlerBehavior : AssetsSpace {
         HyperChargeView.Charge += value * HyperChargeMultiplier[HeroSlot] / 100;
     }
 
-    private IBrawlerAction<BrawlerBehavior> NewInstance(Type type) {
-        var action = (IBrawlerAction<BrawlerBehavior>)type.GetConstructor([]).Invoke([]);
-        action.SetBehavior(this);
-        return action;
-    }
-
-    protected virtual void ConstructAction() {
-        GetType().GetFields()
-            .ForEach(field => {
-                    Console.WriteLine(field.FieldType.IsSubclassOf(typeof(BrawlerAction<>).MakeGenericType(GetType())));
-                }
-            );
-    }
-
     protected virtual void OnDraw(ref PlayerDrawSet drawInfo) {
         GadgetView.Update();
         SuperView.Update();
@@ -149,46 +170,46 @@ public abstract class BrawlerBehavior : AssetsSpace {
         ExtraView?.Update();
     }
 
-    public virtual void PostStaticAction(ref PlayerDrawSet drawInfo) {
-        //StaticActionInstance[HeroSlot].PostAction(ref drawInfo);
-    }
-
-    public virtual void PostAttackAction(ref PlayerDrawSet drawInfo) {
-        //AttackActionInstance[HeroSlot].PostAction(ref drawInfo);
-    }
-
-    public virtual void PostSuperAction(ref PlayerDrawSet drawInfo) {
-        if (!SuperUsed && SuperView.Next()) {
-            SuperUsed = true;
+    public virtual void PostBrawlerAction(BrawlerActionType type, ref PlayerDrawSet drawInfo) {
+        var key = new BrawlerActionKey(type, BrawlerActionSlots[type.Aggregate]);
+        if (type == BrawlerActionType.Super) {
+            if (!SuperUsed && SuperView.Next()) {
+                SuperUsed = true;
+            }
         }
 
-        //SuperActionInstance[HeroSlot].PostAction(ref drawInfo);
-
-        if (Player.itemAnimation == 1) {
-            SuperUsed = false;
-        }
-    }
-
-    public virtual void PostGadgetAction(ref PlayerDrawSet drawInfo) {
-        if (!GadgetUsed && GadgetView.Next()) {
-            GadgetUsed = true;
-            SoundEngine.PlaySound(CommonSoundAssets.Instance.RequestSound(
-                Main.LocalPlayer == Player ? "PlayerUseGadget" : "EnemyUseGadget"
-            ));
+        if (type == BrawlerActionType.Gadget) {
+            if (!GadgetUsed && GadgetView.Next()) {
+                GadgetUsed = true;
+                SoundEngine.PlaySound(CommonSoundAssets.Instance.RequestSound(
+                    Main.LocalPlayer == Player ? "PlayerUseGadget" : "EnemyUseGadget"
+                ));
+            }
         }
 
-        //GadgetActionInstance[GadgetSlot].PostAction(ref drawInfo);
+        BrawlerActions[key].PostAction(ref drawInfo);
+        if (type == BrawlerActionType.Super) {
+            if (Player.itemAnimation == 1) {
+                SuperUsed = false;
+            }
+        }
 
-        if (Player.itemAnimation == 1) {
-            GadgetUsed = false;
+        if (type == BrawlerActionType.Gadget) {
+            if (Player.itemAnimation == 1) {
+                GadgetUsed = false;
+            }
         }
     }
 
     public virtual void PostGadgetSwitch() {
-        //GadgetActionInstance[GadgetSlot].PostDisable();
-        GadgetSlot++;
-        GadgetSlot %= GadgetCategory;
-        //GadgetActionInstance[GadgetSlot].PostEnable();
+        BrawlerActions[
+                new BrawlerActionKey(BrawlerActionType.Gadget, GadgetSlot)]
+            .PostDisable();
+        GadgetSlot = GadgetSlot
+            .Next(BrawlerActionCategories[BrawlerActionAggregate.Gadget]);
+        BrawlerActions[
+                new BrawlerActionKey(BrawlerActionType.Gadget, GadgetSlot)]
+            .PostEnable();
         GadgetView.Reset();
         GadgetUsed = false;
     }
@@ -198,10 +219,14 @@ public abstract class BrawlerBehavior : AssetsSpace {
     }
 
     public virtual void PostStarPowerSwitch() {
-        //StarPowerActionInstance[StarPowerSlot].PostDisable();
-        StarPowerSlot++;
-        StarPowerSlot %= StarPowerCategory;
-        //StarPowerActionInstance[StarPowerSlot].PostEnable();
+        BrawlerActions[
+                new BrawlerActionKey(BrawlerActionType.StarPower, StarPowerSlot)]
+            .PostDisable();
+        StarPowerSlot = StarPowerSlot
+            .Next(BrawlerActionCategories[BrawlerActionAggregate.StarPower]);
+        BrawlerActions[
+                new BrawlerActionKey(BrawlerActionType.StarPower, StarPowerSlot)]
+            .PostEnable();
     }
 
 
@@ -211,19 +236,15 @@ public abstract class BrawlerBehavior : AssetsSpace {
 
     public virtual void Enable() {
         GadgetView.Reset();
-        // AttackActionInstance[HeroSlot].PostEnable();
-        // SuperActionInstance[HeroSlot].PostEnable();
-        // HyperChargeActionInstance[HeroSlot].PostEnable();
-        // GadgetActionInstance[GadgetSlot].PostEnable();
-        // StarPowerActionInstance[StarPowerSlot].PostEnable();
+        BrawlerActionType.All.ForEach(type =>
+            BrawlerActions.GetValueOrDefault(new BrawlerActionKey(type, BrawlerActionSlots[type.Aggregate]))
+                ?.PostEnable());
     }
 
     public virtual void Disable() {
-        // AttackActionInstance[HeroSlot].PostDisable();
-        // SuperActionInstance[HeroSlot].PostDisable();
-        // HyperChargeActionInstance[HeroSlot].PostDisable();
-        // GadgetActionInstance[GadgetSlot].PostDisable();
-        // StarPowerActionInstance[StarPowerSlot].PostDisable();
+        BrawlerActionType.All.ForEach(type =>
+            BrawlerActions.GetValueOrDefault(new BrawlerActionKey(type, BrawlerActionSlots[type.Aggregate]))
+                ?.PostDisable());
     }
 
     public P? ProjectileDepending<P, T>(int projectileIndex) where T : BrawlerBehavior where P : BrawlerProjectile<T> {

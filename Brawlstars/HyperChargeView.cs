@@ -21,7 +21,10 @@ public class HyperChargeView(BrawlerBehavior behavior) : ChargingView(behavior) 
 
     public override int Value => (int)Charge;
     public override Color ThemeColor { get; } = new(255, 84, 249);
-    public override string Tip => Behavior.BrawlerInfo.HeroInfos[Behavior.HeroSlot].HyperCharge.Name;
+
+    public override string Tip => Behavior.BrawlerInfo
+        .HeroInfos[Behavior.BrawlerActionSlots[BrawlerActionAggregate.Hero].Value].HyperCharge.Name;
+
     public override string TipColor => TooltipInfo.ItemTooltip.HyperChargeColor;
 
     public override void Reset() {

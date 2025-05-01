@@ -49,32 +49,34 @@ public abstract class BrawlerItem : ModItem {
         Item.rare = ItemRarityID.Expert;
     }
 
+    public readonly BrawlerActionAggregate[] DataAggregates =
+        [BrawlerActionAggregate.Gadget, BrawlerActionAggregate.StarPower];
+
     public override void LoadData(TagCompound tag) {
-        Behavior.GadgetSlot = tag.GetInt("GadgetSlot");
-        Behavior.StarPowerSlot = tag.GetInt("StarPowerSlot");
+        DataAggregates.ForEach(aggregate => {
+            Behavior.BrawlerActionSlots[aggregate] = BrawlerActionSlot.Get(tag.GetInt(aggregate.Name + "Slot"));
 
-        if (Behavior.GadgetSlot < 0 || Behavior.GadgetSlot >= Behavior.GadgetCategory) {
-            Behavior.GadgetSlot = 0;
-        }
-
-        if (Behavior.StarPowerSlot < 0 || Behavior.StarPowerSlot >= Behavior.StarPowerCategory) {
-            Behavior.StarPowerSlot = 0;
-        }
+            if (Behavior.BrawlerActionSlots[aggregate] < BrawlerActionSlot.First ||
+                Behavior.BrawlerActionSlots[aggregate] >= Behavior.BrawlerActionCategories[aggregate]) {
+                Behavior.BrawlerActionSlots[aggregate] = BrawlerActionSlot.First;
+            }
+        });
     }
 
     public override void SaveData(TagCompound tag) {
-        tag.Set("GadgetSlot", Behavior.GadgetSlot);
-        tag.Set("StarPowerSlot", Behavior.StarPowerSlot);
+        DataAggregates.ForEach(aggregate => {
+            tag.Set(aggregate.Name + "Slot", Behavior.BrawlerActionSlots[aggregate].Value);
+        });
     }
 
     public override void NetSend(BinaryWriter writer) {
-        writer.Write(Behavior.GadgetSlot);
-        writer.Write(Behavior.StarPowerSlot);
+        DataAggregates.ForEach(aggregate => { writer.Write(Behavior.BrawlerActionSlots[aggregate].Value); });
     }
 
     public override void NetReceive(BinaryReader reader) {
-        Behavior.GadgetSlot = reader.ReadInt32();
-        Behavior.StarPowerSlot = reader.ReadInt32();
+        DataAggregates.ForEach(aggregate => {
+            Behavior.BrawlerActionSlots[aggregate] = BrawlerActionSlot.Get(reader.ReadInt32());
+        });
     }
 
     public override bool AltFunctionUse(Player player) {
@@ -108,7 +110,7 @@ public abstract class BrawlerItem : ModItem {
             TooltipInfo.ItemTooltip.DescriptionColor.ColorText(BrawlerDesc)
         );
 
-        for (var i = 0; i < Behavior.HeroCategory; i++) {
+        for (var i = 0; i < Behavior.BrawlerActionCategories[BrawlerActionAggregate.Hero]; i++) {
             var traits = Behavior.BrawlerInfo.HeroInfos[i].Traits;
             var attack = HeroInfos[i].Attack.Name;
             var super = HeroInfos[i].Super.Name;
@@ -192,12 +194,12 @@ public abstract class BrawlerItem : ModItem {
             }
         }
 
-        for (var i = 0; i < Behavior.GadgetCategory; i++) {
+        for (var i = 0; i < Behavior.BrawlerActionCategories[BrawlerActionAggregate.Gadget]; i++) {
             if (GadgetInfos[i].Name.Length != 0) {
                 tooltips.Tooltip(
                     $"Gadget{i}",
                     $"{TooltipInfo.ItemTooltip.GadgetColor.ColorText(TooltipInfo.ItemTooltip.Gadget)}: {GadgetInfos[i].Name}{(Behavior.NotImplementedGadget[i] ? NotImplemented() : "")}" +
-                    $"{(Behavior.GadgetSlot == i ? KeyBinds.GadgetUseTooltip() : KeyBinds.GadgetSelectTooltip())}"
+                    $"{(Behavior.BrawlerActionSlots[BrawlerActionAggregate.Gadget] == i ? KeyBinds.GadgetUseTooltip() : KeyBinds.GadgetSelectTooltip())}"
                 );
                 tooltips.Tooltip(
                     $"Gadget{i}Desc",
@@ -209,12 +211,12 @@ public abstract class BrawlerItem : ModItem {
             }
         }
 
-        for (var i = 0; i < Behavior.StarPowerCategory; i++) {
+        for (var i = 0; i < Behavior.BrawlerActionCategories[BrawlerActionAggregate.StarPower]; i++) {
             if (StarPowerInfos[i].Name.Length != 0) {
                 tooltips.Tooltip(
                     $"StarPower{i}",
                     $"{TooltipInfo.ItemTooltip.StarPowerColor.ColorText(TooltipInfo.ItemTooltip.StarPower)}: {StarPowerInfos[i].Name}{(Behavior.NotImplementedStarPower[i] ? NotImplemented() : "")}" +
-                    $"{(Behavior.StarPowerSlot == i ? KeyBinds.StarPowerSelectedTooltip() : KeyBinds.StarPowerSelectTooltip())}"
+                    $"{(Behavior.BrawlerActionSlots[BrawlerActionAggregate.StarPower] == i ? KeyBinds.StarPowerSelectedTooltip() : KeyBinds.StarPowerSelectTooltip())}"
                 );
                 tooltips.Tooltip(
                     $"StarPower{i}Desc",

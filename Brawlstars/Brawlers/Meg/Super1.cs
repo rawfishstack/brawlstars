@@ -31,7 +31,7 @@ public class SuperAction1 : BrawlerAction<Behavior> {
             }
 
             if (Player.itemAnimation == 1) {
-                Behavior.HeroSlot = 1;
+                Behavior.BrawlerActionSlots[BrawlerActionAggregate.Hero] = BrawlerActionSlot.Second;
             }
 
             if (Player.itemAnimation % 3 == 0) {
